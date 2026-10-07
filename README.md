@@ -1,3 +1,3 @@
 # tymo_Landing
 TYMO pre-launch website.
-tymo.kr
+[TYMO 바로가기](https://tymo.kr)
