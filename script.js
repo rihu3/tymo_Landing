@@ -24,6 +24,9 @@ for (const [index, tab] of tabs.entries()) {
   });
 }
 
+// Choose the starting view once; resizing keeps the visitor's selected tab.
+selectTab(document.getElementById(matchMedia("(max-width: 768px)").matches ? "today-tab" : "month-tab"));
+
 if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
   const observer = new IntersectionObserver(entries => {
     for (const entry of entries) {
