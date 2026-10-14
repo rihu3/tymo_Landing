@@ -49,13 +49,15 @@
 
       <figure class="hero-preview">
         <div class="hero-screens">
-          <div class="hero-screen hero-screen--desktop">
-            <img class="screenshot screenshot--desktop" src="./assets/preview-desktop.webp" width="1440" height="900" alt="TYMO PC 월간 캘린더 실제 화면. 예시 일정으로 한 달의 계획을 모아 봅니다." loading="eager" fetchpriority="high" decoding="async">
-            <p>PC · 월간 캘린더</p>
+          <div class="hero-screen hero-screen--desktop preview-device" data-device="desktop">
+            <img class="screenshot screenshot--desktop" src="./assets/preview-today-desktop.webp" width="1440" height="900" alt="TYMO PC 오늘 실제 화면. 오늘의 일정, 과제·시험과 개인 할 일을 함께 확인하는 예시입니다." loading="eager" fetchpriority="high" decoding="async">
+            <p class="device-caption">PC · 오늘</p>
+            <a class="screenshot-link" href="./assets/preview-today-desktop.webp" target="_blank" rel="noopener" aria-label="PC 오늘 화면 원본 크게 보기 (새 탭)">원본 크게 보기 <span class="new-tab-note">(새 탭)</span></a>
           </div>
-          <div class="hero-screen hero-screen--mobile">
+          <div class="hero-screen hero-screen--mobile preview-device" data-device="mobile">
             <img class="screenshot screenshot--mobile" src="./assets/preview-mobile.webp" width="390" height="844" alt="TYMO 모바일 오늘 실제 화면. 예시 데이터로 오늘의 일정과 할 일을 확인합니다." loading="eager" decoding="async">
-            <p>모바일 · 오늘</p>
+            <p class="device-caption">모바일 · 오늘</p>
+            <a class="screenshot-link" href="./assets/preview-mobile.webp" target="_blank" rel="noopener" aria-label="모바일 오늘 화면 원본 크게 보기 (새 탭)">원본 크게 보기 <span class="new-tab-note">(새 탭)</span></a>
           </div>
         </div>
         <figcaption>개발 중인 실제 화면 · 예시 데이터<br>화면과 기능은 출시 전 달라질 수 있습니다.</figcaption>
@@ -98,7 +100,7 @@
     </section>
 
     <section class="product section container" id="preview" aria-labelledby="preview-heading">
-      <div class="section-heading reveal"><h2 id="preview-heading">한눈에 오늘을.<br>한결 가볍게 내일을.</h2><p>PC와 모바일에서 확인하는 네 가지 실제 화면.<br>탭을 골라 오늘, 월간, 시간표와 근무를 살펴보세요.</p></div>
+      <div class="section-heading reveal"><h2 id="preview-heading">한눈에 오늘을.<br>한결 가볍게 내일을.</h2><p>같은 기능을 PC와 모바일에서 어떻게 보는지 살펴보세요.<br>탭마다 두 기기의 실제 화면을 함께 보여 드려요.</p></div>
       <figure class="product-frame reveal">
         <div class="product-toolbar">
           <div class="preview-tabs" role="tablist" aria-label="실제 서비스 화면 전환">
@@ -110,28 +112,64 @@
           <span class="preview-label">개발 중인 실제 화면</span>
         </div>
         <div id="month-panel" class="preview-panel" role="tabpanel" aria-labelledby="month-tab" tabindex="0">
-          <div class="preview-stage preview-stage--desktop">
-            <img class="screenshot screenshot--desktop" src="./assets/preview-desktop.webp" width="1440" height="900" alt="TYMO PC 월간 캘린더 캡처. 수업, 근무와 개인 일정을 월간 달력에서 함께 확인하는 예시입니다." loading="lazy" decoding="async">
+          <div class="preview-detail"><p>월간 달력에서 수업·근무·개인 약속을 함께 살펴봐요. PC와 모바일 모두 같은 예시 일정을 보여 줍니다.</p></div>
+          <div class="preview-stage preview-pair">
+            <div class="preview-device" data-device="desktop">
+              <img class="screenshot screenshot--desktop" src="./assets/preview-desktop.webp" width="1440" height="900" alt="TYMO PC 월간 실제 화면. 수업, 근무와 개인 일정을 월간 달력에서 함께 확인하는 예시입니다." loading="lazy" decoding="async">
+              <p class="device-caption">PC · 월간</p>
+              <a class="screenshot-link" href="./assets/preview-desktop.webp" target="_blank" rel="noopener" aria-label="PC 월간 화면 원본 크게 보기 (새 탭)">원본 크게 보기 <span class="new-tab-note">(새 탭)</span></a>
+            </div>
+            <div class="preview-device" data-device="mobile">
+              <img class="screenshot screenshot--mobile" src="./assets/preview-month-mobile.webp" width="390" height="844" alt="TYMO 모바일 월간 실제 화면. 수업, 근무와 개인 일정을 월간 달력에서 함께 확인하는 예시입니다." loading="lazy" decoding="async">
+              <p class="device-caption">모바일 · 월간</p>
+              <a class="screenshot-link" href="./assets/preview-month-mobile.webp" target="_blank" rel="noopener" aria-label="모바일 월간 화면 원본 크게 보기 (새 탭)">원본 크게 보기 <span class="new-tab-note">(새 탭)</span></a>
+            </div>
           </div>
-          <div class="preview-detail"><p>PC 월간 달력에서 수업·근무·개인 약속을 함께 살펴봐요.</p><a href="./assets/preview-desktop.webp" target="_blank" rel="noopener">PC 화면 크게 보기 <span class="new-tab-note">(새 탭)</span></a></div>
         </div>
         <div id="today-panel" class="preview-panel" role="tabpanel" aria-labelledby="today-tab" tabindex="0" hidden>
-          <div class="preview-stage preview-stage--mobile">
-            <img class="screenshot screenshot--mobile" src="./assets/preview-mobile.webp" width="390" height="844" alt="TYMO 모바일 오늘 캡처. 오늘의 일정과 할 일을 한곳에서 확인하는 예시입니다." loading="lazy" decoding="async">
+          <div class="preview-detail"><p>오늘 화면에서 다음 일정, 과제·시험과 개인 할 일을 확인해요. PC와 모바일에서 같은 하루를 살펴봐요.</p></div>
+          <div class="preview-stage preview-pair">
+            <div class="preview-device" data-device="desktop">
+              <img class="screenshot screenshot--desktop" src="./assets/preview-today-desktop.webp" width="1440" height="900" alt="TYMO PC 오늘 실제 화면. 오늘의 일정, 과제·시험과 개인 할 일을 한곳에서 확인하는 예시입니다." loading="lazy" decoding="async">
+              <p class="device-caption">PC · 오늘</p>
+              <a class="screenshot-link" href="./assets/preview-today-desktop.webp" target="_blank" rel="noopener" aria-label="PC 오늘 화면 원본 크게 보기 (새 탭)">원본 크게 보기 <span class="new-tab-note">(새 탭)</span></a>
+            </div>
+            <div class="preview-device" data-device="mobile">
+              <img class="screenshot screenshot--mobile" src="./assets/preview-mobile.webp" width="390" height="844" alt="TYMO 모바일 오늘 실제 화면. 오늘의 일정, 과제·시험과 개인 할 일을 한곳에서 확인하는 예시입니다." loading="lazy" decoding="async">
+              <p class="device-caption">모바일 · 오늘</p>
+              <a class="screenshot-link" href="./assets/preview-mobile.webp" target="_blank" rel="noopener" aria-label="모바일 오늘 화면 원본 크게 보기 (새 탭)">원본 크게 보기 <span class="new-tab-note">(새 탭)</span></a>
+            </div>
           </div>
-          <div class="preview-detail"><p>모바일 오늘 화면에서 다음 일정, 과제·시험과 개인 할 일을 확인해요.</p><a href="./assets/preview-mobile.webp" target="_blank" rel="noopener">모바일 화면 크게 보기 <span class="new-tab-note">(새 탭)</span></a></div>
         </div>
         <div id="study-panel" class="preview-panel" role="tabpanel" aria-labelledby="study-tab" tabindex="0" hidden>
-          <div class="preview-stage">
-            <img class="screenshot screenshot--study" src="./assets/preview-study.webp" width="1440" height="1200" alt="TYMO PC 시간표 실제 화면. 디자인 기초 수업과 같은 과목의 프로젝트 초안 제출, 글쓰기 수업과 중간 평가를 함께 보는 예시입니다." loading="lazy" decoding="async">
+          <div class="preview-detail"><p>시간표에서 수업 시간을, 과제·시험 목록에서 과목별 마감을 확인해요. 같은 학업 정보를 두 기기에서 보여 줍니다.</p></div>
+          <div class="preview-stage preview-pair">
+            <div class="preview-device" data-device="desktop">
+              <img class="screenshot screenshot--study" src="./assets/preview-study.webp" width="1440" height="1200" alt="TYMO PC 시간표·과제 실제 화면. 디자인 기초 수업과 같은 과목의 프로젝트 초안 제출 등 과목별 수업과 마감을 확인하는 예시입니다." loading="lazy" decoding="async">
+              <p class="device-caption">PC · 시간표·과제</p>
+              <a class="screenshot-link" href="./assets/preview-study.webp" target="_blank" rel="noopener" aria-label="PC 시간표·과제 화면 원본 크게 보기 (새 탭)">원본 크게 보기 <span class="new-tab-note">(새 탭)</span></a>
+            </div>
+            <div class="preview-device" data-device="mobile">
+              <img class="screenshot screenshot--mobile-long" src="./assets/preview-study-mobile.webp" width="390" height="1100" alt="TYMO 모바일 시간표·과제 실제 화면. 디자인 기초 수업과 같은 과목의 프로젝트 초안 제출 등 과목별 수업과 마감을 확인하는 예시입니다." loading="lazy" decoding="async">
+              <p class="device-caption">모바일 · 시간표·과제</p>
+              <a class="screenshot-link" href="./assets/preview-study-mobile.webp" target="_blank" rel="noopener" aria-label="모바일 시간표·과제 화면 원본 크게 보기 (새 탭)">원본 크게 보기 <span class="new-tab-note">(새 탭)</span></a>
+            </div>
           </div>
-          <div class="preview-detail"><p>시간표에서 수업 시간을, 아래 과제·시험 목록에서 과목별 마감을 확인해요.</p><a href="./assets/preview-study.webp" target="_blank" rel="noopener">시간표·과제 화면 크게 보기 <span class="new-tab-note">(새 탭)</span></a></div>
         </div>
         <div id="work-panel" class="preview-panel" role="tabpanel" aria-labelledby="work-tab" tabindex="0" hidden>
-          <div class="preview-stage">
-            <img class="screenshot screenshot--desktop" src="./assets/preview-work.webp" width="1440" height="900" alt="TYMO PC 근무 실제 화면. 카페 근무의 완료·예정 상태와 근무 시간, 급여 합계를 확인하는 예시입니다." loading="lazy" decoding="async">
+          <div class="preview-detail"><p>근무 시간과 완료·예정 상태를 확인해요. 합계는 완료한 근무의 금액과 예정된 근무의 예상액을 함께 포함한 참고 금액입니다.</p></div>
+          <div class="preview-stage preview-pair">
+            <div class="preview-device" data-device="desktop">
+              <img class="screenshot screenshot--desktop" src="./assets/preview-work.webp" width="1440" height="900" alt="TYMO PC 근무·급여 실제 화면. 카페 근무의 완료·예정 상태와 근무 시간, 급여 합계를 확인하는 예시입니다." loading="lazy" decoding="async">
+              <p class="device-caption">PC · 근무·급여</p>
+              <a class="screenshot-link" href="./assets/preview-work.webp" target="_blank" rel="noopener" aria-label="PC 근무·급여 화면 원본 크게 보기 (새 탭)">원본 크게 보기 <span class="new-tab-note">(새 탭)</span></a>
+            </div>
+            <div class="preview-device" data-device="mobile">
+              <img class="screenshot screenshot--mobile-long" src="./assets/preview-work-mobile.webp" width="390" height="1100" alt="TYMO 모바일 근무·급여 실제 화면. 카페 근무의 완료·예정 상태와 근무 시간, 급여 합계를 확인하는 예시입니다." loading="lazy" decoding="async">
+              <p class="device-caption">모바일 · 근무·급여</p>
+              <a class="screenshot-link" href="./assets/preview-work-mobile.webp" target="_blank" rel="noopener" aria-label="모바일 근무·급여 화면 원본 크게 보기 (새 탭)">원본 크게 보기 <span class="new-tab-note">(새 탭)</span></a>
+            </div>
           </div>
-          <div class="preview-detail"><p>근무 내역에서 시간과 완료·예정 상태를 확인해요. 합계는 완료한 근무의 금액과 예정된 근무의 예상액을 함께 포함한 참고 금액입니다.</p><a href="./assets/preview-work.webp" target="_blank" rel="noopener">근무·급여 화면 크게 보기 <span class="new-tab-note">(새 탭)</span></a></div>
         </div>
         <figcaption>예시 데이터로 촬영한 개발 중인 실제 서비스 화면입니다.<br>화면과 기능은 출시 전 달라질 수 있습니다.</figcaption>
       </figure>

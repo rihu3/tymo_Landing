@@ -63,13 +63,16 @@ h1 span { color: var(--accent); }
 .button:active { transform: translateY(1px); }
 .hero-preview { min-width: 0; }
 .hero-screens { display: grid; grid-template-columns: minmax(0, 3.46fr) minmax(0, 1fr); gap: 16px; align-items: start; }
-.hero-screen { min-width: 0; }
+.hero-screen, .preview-device { min-width: 0; text-align: center; }
 .screenshot { display: block; max-width: 100%; width: 100%; height: auto; background: var(--surface); }
 .screenshot--desktop { aspect-ratio: 1440 / 900; }
 .screenshot--mobile { aspect-ratio: 390 / 844; }
 .screenshot--study { aspect-ratio: 1440 / 1200; }
+.screenshot--mobile-long { aspect-ratio: 390 / 1100; }
 .hero-screen .screenshot { border: 1px solid #ccdcd1; border-radius: var(--radius-small); box-shadow: 0 12px 32px rgb(37 76 58 / .07); }
-.hero-screen > p { margin-top: 10px; text-align: center; color: var(--muted); font-size: 12px; }
+.device-caption { margin-top: 12px; color: var(--muted); font-size: 12px; }
+.screenshot-link { display: inline-flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 4px; min-height: 44px; padding-block: 8px; color: var(--accent); font-size: 14px; font-weight: 650; text-decoration: underline; text-underline-offset: 4px; }
+.screenshot-link:hover { color: var(--accent-hover); }
 .hero-preview figcaption { text-align: center; margin-top: 18px; color: var(--muted); font-size: 12px; line-height: 1.8; }
 .preview-label { color: var(--muted); font-size: 12px; font-weight: 550; }
 .about { border-top: 1px solid var(--line); }
@@ -100,12 +103,10 @@ h1 span { color: var(--accent); }
 .preview-panel { min-width: 0; }
 .preview-panel:focus-visible { outline-offset: -4px; }
 .preview-stage { background: #edf3ef; }
-.preview-stage--mobile { padding: 28px; }
-.preview-stage--mobile .screenshot { width: min(100%, 340px); margin-inline: auto; border: 1px solid #ccdcd1; border-radius: var(--radius-small); }
-.preview-detail { display: flex; justify-content: space-between; align-items: center; gap: 12px 24px; flex-wrap: wrap; padding: 18px 24px; }
-.preview-detail p { flex: 1 1 420px; color: var(--muted); font-size: 15px; }
-.preview-detail a { display: inline-flex; align-items: center; gap: 5px; min-height: 44px; color: var(--accent); font-size: 14px; font-weight: 650; text-decoration: underline; text-underline-offset: 4px; }
-.preview-detail a:hover { color: var(--accent-hover); }
+.preview-pair { display: grid; grid-template-columns: minmax(0, 3.46fr) minmax(0, 1fr); align-items: start; gap: 24px; padding: 24px; }
+.preview-pair .screenshot { border: 1px solid #ccdcd1; border-radius: var(--radius-small); }
+.preview-detail { padding: 20px 24px; }
+.preview-detail p { color: var(--muted); font-size: 15px; }
 .new-tab-note { font-size: 12px; font-weight: 400; }
 .product-frame figcaption { padding: 16px 24px; text-align: center; font-size: 12px; color: var(--muted); border-top: 1px solid var(--line); background: #fafcfb; line-height: 1.8; }
 .development { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #f0f5f1; }
@@ -148,8 +149,8 @@ h1 span { color: var(--accent); }
   .hero { width: calc(100% - 40px); padding-top: 42px; padding-bottom: 60px; }
   .hero-copy { max-width: 560px; }
   .hero-screens { grid-template-columns: 1fr; gap: 24px; }
-  .hero-screen--desktop { display: none; }
-  .hero-screen--mobile { order: -1; width: min(100%, 300px); justify-self: center; }
+  .hero-screen--mobile, .preview-pair [data-device="mobile"] { order: -1; width: min(100%, 300px); justify-self: center; }
+  .preview-pair { grid-template-columns: 1fr; gap: 24px; padding: 20px; }
   h1 { font-size: clamp(38px, 7.2vw, 54px); line-height: 1.25; }
   .hero-description { font-size: 15px; }
   .hero-actions { margin-top: 26px; gap: 10px; }
@@ -189,8 +190,8 @@ h1 span { color: var(--accent); }
   .product-toolbar { padding: 14px; }
   .product-toolbar > .preview-label { font-size: 12px; }
   .preview-tabs button { padding-inline: 10px; font-size: 14px; }
-  .preview-stage--mobile { padding: 18px; }
-  .preview-detail { padding: 14px 18px; gap: 6px; }
+  .preview-pair { padding: 18px; }
+  .preview-detail { padding: 18px; }
   .footer-inner { flex-wrap: wrap; gap: 26px; }
   .footer-links { gap: 22px; }
   .copyright { width: 100%; }
