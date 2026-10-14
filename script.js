@@ -27,6 +27,15 @@ for (const [index, tab] of tabs.entries()) {
 // Choose the starting view once; resizing keeps the visitor's selected tab.
 selectTab(document.getElementById(matchMedia("(max-width: 768px)").matches ? "today-tab" : "month-tab"));
 
+// Keep the native anchor as the no-JavaScript fallback.
+for (const link of document.querySelectorAll("[data-preview-tab]")) {
+  link.addEventListener("click", () => {
+    const tab = document.getElementById(link.dataset.previewTab);
+    selectTab(tab);
+    tab.focus({ preventScroll: true });
+  });
+}
+
 if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
   const observer = new IntersectionObserver(entries => {
     for (const entry of entries) {
