@@ -91,22 +91,30 @@ h1 span { color: var(--accent); }
 .menu-choice h3 { font-size: 18px; letter-spacing: -.5px; }
 .menu-choice p { margin-top: 8px; font-size: 14px; color: var(--muted); }
 .features { background: #edf3ef; }
-.feature-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 42px; }
+.feature-core { display: flex; justify-content: space-between; align-items: center; gap: 40px; margin-top: 36px; padding: 28px 0; border-block: 1px solid #ccdcd1; }
+.feature-core > div { max-width: 720px; }
+.feature-core h3 { font-size: 22px; letter-spacing: -.8px; }
+.feature-core p { margin-top: 10px; color: var(--muted); font-size: 15px; line-height: 1.85; }
+.feature-core .feature-link { flex-shrink: 0; margin-top: 0; }
+.feature-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 28px; }
 .feature-card { position: relative; min-width: 0; padding: 30px; border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius); overflow: hidden; }
 .feature-card h3 { font-size: 20px; letter-spacing: -.9px; }
 .feature-card > p { font-size: 15px; line-height: 1.8; color: var(--muted); margin-top: 10px; }
 .feature-work { background: #f8fcf9; }
+.feature-more-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; margin-top: 36px; }
+.feature-more h3 { font-size: 18px; letter-spacing: -.5px; }
+.feature-more p { margin-top: 12px; color: var(--muted); font-size: 14px; line-height: 1.85; }
 .feature-link { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin-top: 18px; color: var(--accent); font-size: 14px; font-weight: 650; text-decoration: underline; text-underline-offset: 4px; }
 .feature-link:hover { color: var(--accent-hover); }
 .section-note { text-align: center; color: var(--muted); font-size: 12px; margin-top: 23px; }
-.usage-demos { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line); }
+.usage-demos { max-width: 960px; }
 .usage-heading { max-width: 960px; margin-inline: auto; }
-.usage-heading h3 { font-size: 22px; letter-spacing: -.8px; }
+.usage-heading h2 { font-size: clamp(29px, 3.1vw, 42px); line-height: 1.35; letter-spacing: -1.7px; }
 .usage-heading p { margin-top: 10px; color: var(--muted); font-size: 14px; }
 .demo-grid { display: grid; gap: 36px; max-width: 960px; margin: 24px auto 0; }
 .demo-card { min-width: 0; }
 .demo-card figcaption { margin-bottom: 16px; }
-.demo-card h4 { font-size: 18px; letter-spacing: -.5px; }
+.demo-card h3 { font-size: 18px; letter-spacing: -.5px; }
 .demo-card figcaption p { margin-top: 6px; color: var(--muted); font-size: 14px; }
 .demo-video { display: block; width: 100%; height: auto; aspect-ratio: 1280 / 800; border: 1px solid #ccdcd1; border-radius: var(--radius-small); background: var(--surface); }
 .demo-transcript { margin-top: 12px; color: var(--muted); font-size: 14px; }
@@ -199,6 +207,11 @@ h1 span { color: var(--accent); }
   .day-grid { grid-template-columns: 1fr; gap: 24px; margin-top: 30px; }
   .feature-card { padding: 25px; }
   .feature-card h3 { font-size: 20px; }
+  .feature-core { align-items: flex-start; flex-direction: column; gap: 16px; }
+  .feature-more-grid { grid-template-columns: 1fr; gap: 24px; }
+  .feature-more { padding-top: 22px; border-top: 1px solid #ccdcd1; }
+  .feature-more-grid { margin-top: 28px; }
+  .usage-heading h2 { font-size: 32px; }
   .demo-grid { grid-template-columns: 1fr; gap: 30px; }
   .product-toolbar .preview-tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); width: 100%; padding: 3px; gap: 0; }
   .product-toolbar { position: sticky; top: var(--header-height); z-index: 5; padding: 10px; min-height: 58px; gap: 0; background: var(--surface); box-shadow: 0 4px 12px rgb(30 67 48 / .04); }
@@ -234,6 +247,8 @@ h1 span { color: var(--accent); }
   .feature-grid { grid-template-columns: 1fr; gap: 16px; margin-top: 30px; }
   .feature-card { padding: 26px; }
   .feature-card h3 { font-size: 20px; }
+  .feature-core h3 { font-size: 20px; }
+  .usage-heading h2 { font-size: 29px; }
   .section-note { font-size: 12px; text-align: left; }
   .product-frame { margin-top: 30px; }
   .preview-pair { padding: 18px; }
