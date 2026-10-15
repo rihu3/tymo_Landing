@@ -120,6 +120,19 @@ if (typeof viewer.showModal === "function") {
   });
 }
 
+const demoVideos = [...document.querySelectorAll(".demo-video")];
+for (const video of demoVideos) {
+  video.addEventListener("play", () => {
+    for (const other of demoVideos) if (other !== video && !other.paused) other.pause();
+  });
+}
+if ("IntersectionObserver" in window) {
+  const playbackObserver = new IntersectionObserver(entries => {
+    for (const entry of entries) if (!entry.isIntersecting && !entry.target.paused) entry.target.pause();
+  });
+  for (const video of demoVideos) playbackObserver.observe(video);
+}
+
 if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
   const observer = new IntersectionObserver(entries => {
     for (const entry of entries) {

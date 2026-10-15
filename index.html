@@ -96,6 +96,29 @@
           </article>
         </div>
         <p class="section-note">현재 개발 중인 기능입니다. 예상 급여는 입력한 조건에 따른 참고 금액입니다.</p>
+        <div class="usage-demos" aria-labelledby="usage-heading">
+          <div class="usage-heading"><h3 id="usage-heading">실제로 사용하는 모습</h3><p id="usage-note">예시 데이터로 촬영한 개발 중인 PC 화면입니다. 재생을 눌러 살펴보세요. 전체 화면으로 보면 작은 글씨까지 확인할 수 있어요.</p></div>
+          <div class="demo-grid">
+            <figure class="demo-card" id="schedule-demo">
+              <figcaption><h4 id="schedule-demo-heading">일정 추가 과정</h4><p id="schedule-demo-description">약 14초 · 일정을 입력하고 월간·오늘 화면에서 확인해요.</p></figcaption>
+              <video id="demo-schedule" class="demo-video" controls playsinline muted preload="none" poster="./assets/demo-schedule-poster.webp" width="1440" height="900" aria-labelledby="schedule-demo-heading" aria-describedby="schedule-demo-description usage-note">
+                <source src="./assets/demo-schedule.mp4" type="video/mp4">
+                <track kind="captions" src="./assets/demo-schedule.ko.vtt" srclang="ko" label="한국어" default>
+                이 브라우저에서는 영상을 재생할 수 없습니다. <a href="./assets/demo-schedule.mp4">일정 추가 과정 영상 파일 보기</a>
+              </video>
+              <details class="demo-transcript"><summary>일정 추가 과정을 글로 보기</summary><ol><li>달력에서 날짜를 고르고 일정 추가 양식을 열어요.</li><li>‘팀 프로젝트 회의’를 13:00–14:00로 입력한 뒤 저장해요.</li><li>저장한 일정이 월간 달력과 오늘 화면에 표시되는지 확인해요.</li></ol></details>
+            </figure>
+            <figure class="demo-card" id="work-demo">
+              <figcaption><h4 id="work-demo-heading">근무·급여 확인 과정</h4><p id="work-demo-description">약 20초 · 근무처 등록부터 근무 완료, 예상 급여 확인까지 살펴보세요.</p></figcaption>
+              <video id="demo-work" class="demo-video" controls playsinline muted preload="none" poster="./assets/demo-work-poster.webp" width="1280" height="800" aria-labelledby="work-demo-heading" aria-describedby="work-demo-description usage-note">
+                <source src="./assets/demo-work.mp4" type="video/mp4">
+                <track kind="captions" src="./assets/demo-work.ko.vtt" srclang="ko" label="한국어" default>
+                이 브라우저에서는 영상을 재생할 수 없습니다. <a href="./assets/demo-work.mp4">근무·급여 확인 과정 영상 파일 보기</a>
+              </video>
+              <details class="demo-transcript"><summary>근무·급여 확인 과정을 글로 보기</summary><ol><li>‘카페 근무’를 등록하고 시급 11,000원을 입력해요.</li><li>16:00–20:00 근무를 추가한 뒤 저장해요.</li><li>근무 완료로 바꾸고 4시간·44,000원 합계를 확인해요. 입력한 조건의 참고 금액이며 실제 지급액과 차이가 날 수 있어요.</li></ol></details>
+            </figure>
+          </div>
+        </div>
       </div>
     </section>
 
