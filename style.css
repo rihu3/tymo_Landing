@@ -117,14 +117,6 @@ h1 span { color: var(--accent); }
 .development { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #f0f5f1; }
 .development-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 76px; align-items: start; }
 .section-heading > .development-note { color: var(--accent); font-size: 14px; }
-.development-updates { grid-column: 2; grid-row: 1 / span 2; }
-.development-updates > h3 { font-size: 20px; letter-spacing: -.7px; }
-.updates-description { margin-top: 10px; color: var(--muted); font-size: 14px; }
-.update-list { margin-top: 24px; display: grid; gap: 25px; }
-.update-list li { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 18px; padding-top: 22px; border-top: 1px solid var(--line); }
-.update-list time { color: var(--accent); font-size: 12px; font-weight: 650; padding-top: 3px; }
-.update-list h4 { font-size: 16px; letter-spacing: -.3px; }
-.update-list p { margin-top: 8px; color: var(--muted); font-size: 14px; line-height: 1.85; }
 .faq-list { display: grid; gap: 24px; }
 .faq-list > details { border-top: 1px solid var(--line); padding-top: 20px; }
 .faq-list summary { min-height: 44px; cursor: pointer; font-size: 17px; font-weight: 650; letter-spacing: -.4px; }
@@ -199,7 +191,6 @@ h1 span { color: var(--accent); }
   .preview-tabs button { padding-inline: 3px; font-size: 12px; }
   .product-frame figcaption { padding-inline: 18px; font-size: 12px; }
   .development-layout { grid-template-columns: 1fr; gap: 40px; }
-  .development-updates { grid-column: auto; grid-row: auto; }
   .viewer-toolbar { flex-wrap: wrap; gap: 10px; padding: 12px 14px 8px; }
   .viewer-toolbar h2 { font-size: 17px; }
   .viewer-actions { margin-left: auto; }
@@ -234,7 +225,6 @@ h1 span { color: var(--accent); }
   .preview-detail { padding: 18px; }
   .footer-inner { flex-wrap: wrap; gap: 26px; }
   .footer-links { gap: 12px 22px; flex-wrap: wrap; justify-content: flex-start; }
-  .update-list li { grid-template-columns: 1fr; gap: 6px; }
   .copyright { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
