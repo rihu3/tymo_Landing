@@ -38,12 +38,16 @@
   <main id="main">
     <section class="hero container" id="top" aria-labelledby="hero-heading">
       <div class="hero-copy">
-        <p class="launch-label"><span class="status-dot" aria-hidden="true"></span>개발 중인 개인 일정 관리 앱</p>
-        <h1 id="hero-heading">당신의 시간에,<br><span>여유를 더하다.</span></h1>
-        <p class="hero-description"><strong>약속과 할 일부터 수업·근무까지 한곳에.</strong><br>오늘 할 일과 이번 달 계획을<br>TYMO에서 함께 확인하세요.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#preview">실제 화면 보기 <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
-          <a class="button button-secondary" href="#development">개발 현황 보기</a>
+        <div class="hero-title">
+          <p class="launch-label"><span class="status-dot" aria-hidden="true"></span>개발 중인 개인 일정 관리 앱</p>
+          <h1 id="hero-heading">당신의 시간에,<br><span>여유를 더하다.</span></h1>
+        </div>
+        <div class="hero-intro">
+          <p class="hero-description"><strong>약속과 할 일부터 수업·근무까지 한곳에.</strong><br>오늘 할 일과 이번 달 계획을<br>TYMO에서 함께 확인하세요.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#preview">실제 화면 보기 <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+            <a class="button button-secondary" href="#development">개발 현황 보기</a>
+          </div>
         </div>
       </div>
 
@@ -60,7 +64,7 @@
             <a class="screenshot-link" href="./assets/preview-mobile.webp" target="_blank" rel="noopener" aria-label="모바일 오늘 화면 원본 크게 보기 (새 탭)">원본 크게 보기 <span class="new-tab-note">(새 탭)</span></a>
           </div>
         </div>
-        <figcaption>개발 중인 실제 화면 · 예시 데이터<br>화면과 기능은 출시 전 달라질 수 있습니다.</figcaption>
+        <figcaption><span>개발 중인 실제 화면 · 예시 데이터</span><span>화면과 기능은 출시 전 달라질 수 있습니다.</span></figcaption>
       </figure>
     </section>
 
@@ -70,9 +74,9 @@
         <p>회의와 개인 약속, 시간을 정하지 않은 할 일까지.<br>오늘 화면에서 함께 확인하는 하루의 예시입니다.</p>
       </div>
       <div class="day-grid reveal">
-        <article><h3>오후 회의 확인하기</h3><p>13시 팀 프로젝트 회의를 확인해요. 다음 일정과 오늘의 약속을 함께 살펴봐요.</p></article>
-        <article><h3>시간 미정 할 일 챙기기</h3><p>‘읽고 싶은 책 고르기’처럼 시각을 정하지 않은 일은 할 일 목록에서 챙겨요.</p></article>
-        <article><h3>저녁에는 나를 위한 시간</h3><p>19시 산책 일정을 확인하고, 마친 할 일은 완료로 체크해요.</p></article>
+        <article><time class="day-time" datetime="13:00">13:00</time><div><h3>오후 회의 확인하기</h3><p>팀 프로젝트 회의부터 다음 약속까지, 오늘의 일정을 함께 살펴봐요.</p></div></article>
+        <article><span class="day-time day-time--flexible">시간 미정</span><div><h3>할 일은 따로 놓치지 않게</h3><p>‘읽고 싶은 책 고르기’처럼 시각을 정하지 않은 일은 할 일 목록에서 챙겨요.</p></div></article>
+        <article><time class="day-time" datetime="19:00">19:00</time><div><h3>저녁에는 나를 위한 시간</h3><p>산책 일정을 확인하고, 마친 할 일은 완료로 체크해요.</p></div></article>
       </div>
       <div class="menu-choice reveal">
         <h3>일정과 할 일만으로 시작해도 괜찮아요.</h3>
@@ -90,19 +94,21 @@
         <div class="feature-grid">
           <article class="feature-card feature-study reveal" data-feature="study">
             <h3>수업·과제·시험과 성적까지</h3>
-            <p>시간표의 수업을 일정에 적용하고, 과목별 과제·시험 날짜를 직접 입력해 마감을 챙겨요. 성적 계산기에는 시간표 과목을 가져온 뒤 학점·단위와 성적을 입력해 학점·내신의 참고 평균을 계산해요.</p>
+            <p class="feature-result">시간표와 과제·시험 마감을 연결하고,<br>성적 계산기로 학기 기록까지 챙겨요.</p>
+            <details class="feature-detail"><summary>수업·성적 관리 자세히</summary><p>시간표 수업은 일정에 적용하고, 과제·시험 날짜는 직접 입력해요. 성적 계산기에는 과목명을 가져온 뒤 학점·단위와 성적을 입력해 학점·내신의 참고 평균을 계산해요.</p></details>
             <a class="feature-link" href="#preview" data-preview-tab="study-tab">시간표·과제 화면 보기 <span aria-hidden="true">→</span></a>
           </article>
           <article class="feature-card feature-work reveal" data-feature="work">
             <h3>근무 기록과 예상 급여를 함께</h3>
-            <p>근무처별 시급·고정 일급을 설정하고, 근무 시간과 완료·예정 상태를 기록해요. 시급은 근무·휴게시간에 따라, 고정 일급은 근무 기록마다 계산해요. 일급의 추가 수당은 별도로 입력해요.</p>
+            <p class="feature-result">시급·고정 일급에 맞춰 근무를 기록하고,<br>완료·예정 상태와 예상 급여를 확인해요.</p>
+            <details class="feature-detail"><summary>급여 계산 기준 보기</summary><p>시급은 근무·휴게시간에 따라, 고정 일급은 근무 기록마다 계산해요. 일급의 추가 수당은 별도로 입력해요. 예상 급여는 입력한 조건의 참고 금액이며 실제 지급액과 차이가 날 수 있어요.</p></details>
             <a class="feature-link" href="#preview" data-preview-tab="work-tab">근무·급여 화면 보기 <span aria-hidden="true">→</span></a>
           </article>
         </div>
         <div class="feature-more-grid">
-          <article class="feature-more reveal" data-feature="friends"><h3>친구와 필요한 일정만</h3><p>선택한 일정을 공유하거나 새 일정을 제안해요. 받은 초대·제안은 수락한 뒤에만 달력에 표시돼요. 다른 개인 기록은 함께 공유되지 않아요.</p></article>
-          <article class="feature-more reveal" data-feature="diary"><h3>하루의 기록은 나만 보게</h3><p>날짜별 비공개 일기에 마음에 남은 순간을 적어요. 한 가지로 설명하기 어려운 날의 기분은 여러 개 선택할 수 있어요. 일기는 친구에게 공유되지 않아요.</p></article>
-          <article class="feature-more reveal" data-feature="employment"><h3>취업 준비도 일정과 연결</h3><p>지원 공고와 진행 상태, 전형을 정리해요. 날짜를 입력한 지원 마감과 면접 등 전형은 달력에 연결돼 약속·근무와 함께 확인할 수 있어요.</p></article>
+          <article class="feature-more reveal" data-feature="friends"><h3>친구와 필요한 일정만</h3><p>선택한 일정을 공유하거나 새 일정을 제안해요. 초대·제안은 수락한 뒤에만 달력에 표시되고, 다른 개인 기록은 함께 공유되지 않아요.</p></article>
+          <article class="feature-more reveal" data-feature="diary"><h3>하루의 기록은 나만 보게</h3><p>비공개 일기에 하루를 적고 여러 기분을 함께 골라요. 일기는 나만 볼 수 있고 친구에게 공유되지 않아요.</p></article>
+          <article class="feature-more reveal" data-feature="employment"><h3>취업 준비도 일정과 연결</h3><p>지원 공고와 진행 상태를 정리해요. 날짜를 입력한 지원 마감과 면접 등 전형은 달력에 연결해 함께 확인해요.</p></article>
         </div>
         <p class="section-note">정식 공개 전 개발 중인 기능입니다. 성적은 입력한 값의 참고 평균, 예상 급여는 입력한 조건의 참고 금액입니다.</p>
       </div>
