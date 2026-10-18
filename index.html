@@ -40,13 +40,13 @@
       <div class="hero-copy">
         <div class="hero-title">
           <p class="launch-label"><span class="status-dot" aria-hidden="true"></span>개발 중인 개인 일정 관리 앱</p>
-          <h1 id="hero-heading">당신의 시간에,<br><span>여유를 더하다.</span></h1>
+          <h1 id="hero-heading">수업도, 근무도, 약속도.<br><span>내 하루는 한곳에서.</span></h1>
         </div>
         <div class="hero-intro">
-          <p class="hero-description"><strong>약속과 할 일부터 수업·근무까지 한곳에.</strong><br>오늘 할 일과 이번 달 계획을<br>TYMO에서 함께 확인하세요.</p>
+          <p class="hero-description"><strong>오늘 일정과 해야 할 일을 함께 확인하세요.</strong><br>시간표·근무·취업 등 필요한 메뉴만 골라<br>나에게 맞는 일정 관리를 시작할 수 있어요.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#preview">실제 화면 보기 <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
-            <a class="button button-secondary" href="#development">개발 현황 보기</a>
+            <a class="button button-secondary" href="#usage">사용 영상 보기</a>
           </div>
         </div>
       </div>
@@ -70,13 +70,13 @@
 
     <section class="about section container" id="about" aria-labelledby="about-heading">
       <div class="section-heading reveal">
-        <h2 id="about-heading">일정은 흩어져 있어도,<br>하루는 하나니까.</h2>
-        <p>회의와 개인 약속, 시간을 정하지 않은 할 일까지.<br>오늘 화면에서 함께 확인하는 하루의 예시입니다.</p>
+        <h2 id="about-heading">오늘 수업과 이번 주 근무,<br>한곳에서 확인해요.</h2>
+        <p>10월 13일 화요일의 수업·과제부터 같은 주 금요일의 근무까지. 미리보기에 담긴 한 사람의 하루와 한 주를 따라가 보세요.</p>
       </div>
       <div class="day-grid reveal">
-        <article><time class="day-time" datetime="13:00">13:00</time><div><h3>오후 회의 확인하기</h3><p>팀 프로젝트 회의부터 다음 약속까지, 오늘의 일정을 함께 살펴봐요.</p></div></article>
-        <article><span class="day-time day-time--flexible">시간 미정</span><div><h3>할 일은 따로 놓치지 않게</h3><p>‘읽고 싶은 책 고르기’처럼 시각을 정하지 않은 일은 할 일 목록에서 챙겨요.</p></div></article>
-        <article><time class="day-time" datetime="19:00">19:00</time><div><h3>저녁에는 나를 위한 시간</h3><p>산책 일정을 확인하고, 마친 할 일은 완료로 체크해요.</p></div></article>
+        <article><time class="day-time" datetime="2026-10-13T09:00"><span>10/13 (화)</span>09:00</time><div><h3>수업도 다른 일정과 함께</h3><p>시간표의 ‘디자인 기초’ 수업을 일정에 적용해, 개인 약속과 같은 달력에서 확인해요.</p></div></article>
+        <article><time class="day-time" datetime="2026-10-13T18:00"><span>10/13 마감</span>18:00</time><div><h3>수업에서 받은 과제 챙기기</h3><p>직접 입력한 ‘프로젝트 초안 제출’ 마감을 오늘 화면에서 확인하고, 끝내면 완료로 체크해요.</p></div></article>
+        <article><time class="day-time" datetime="2026-10-16T16:00"><span>10/16 (금)</span>16:00</time><div><h3>이번 주 카페 근무까지</h3><p>금요일 근무도 같은 달력에서 살펴봐요. 근무 화면에서는 기록한 시간과 입력 조건에 따른 예상 급여를 확인해요.</p></div></article>
       </div>
       <div class="menu-choice reveal">
         <h3>일정과 할 일만으로 시작해도 괜찮아요.</h3>
@@ -127,7 +127,10 @@
           <span class="preview-label">개발 중인 실제 화면</span>
         </div>
         <div id="month-panel" class="preview-panel" role="tabpanel" aria-labelledby="month-tab" tabindex="0">
-          <div class="preview-detail"><p>월간 달력에서 수업·근무·개인 약속을 함께 살펴봐요. PC와 모바일 모두 같은 예시 일정을 보여 줍니다.</p></div>
+          <div class="preview-detail">
+            <h3>수업·근무·약속을 같은 달력에서.</h3>
+            <ul class="preview-points"><li><strong>한 달의 일정</strong><span>수업과 카페 근무, 개인 약속을 함께 살펴봐요.</span></li><li><strong>날짜별 계획</strong><span>날짜마다 어떤 일정이 있는지 확인해요.</span></li></ul>
+          </div>
           <div class="preview-stage preview-pair">
             <div class="preview-device" data-device="desktop">
               <a class="screenshot-trigger" href="./assets/preview-desktop.webp" target="_blank" rel="noopener" aria-label="PC 월간 화면 원본 크게 보기 (새 탭)"><img class="screenshot screenshot--desktop" src="./assets/preview-desktop.webp" width="1440" height="900" alt="TYMO PC 월간 실제 화면. 수업, 근무와 개인 일정을 월간 달력에서 함께 확인하는 예시입니다." loading="lazy" decoding="async"></a>
@@ -142,7 +145,10 @@
           </div>
         </div>
         <div id="today-panel" class="preview-panel" role="tabpanel" aria-labelledby="today-tab" tabindex="0" hidden>
-          <div class="preview-detail"><p>오늘 화면에서 다음 일정, 과제·시험과 개인 할 일을 확인해요. PC와 모바일에서 같은 하루를 살펴봐요.</p></div>
+          <div class="preview-detail">
+            <h3>오늘 일정과 해야 할 일을 한 화면에서.</h3>
+            <ul class="preview-points"><li><strong>다음 일정</strong><span>13:00 팀 프로젝트 회의를 미리 확인해요.</span></li><li><strong>과제와 개인 할 일</strong><span>18:00 마감 과제와 개인 할 일을 확인하고 완료로 체크해요.</span></li></ul>
+          </div>
           <div class="preview-stage preview-pair">
             <div class="preview-device" data-device="desktop">
               <a class="screenshot-trigger" href="./assets/preview-today-desktop.webp" target="_blank" rel="noopener" aria-label="PC 오늘 화면 원본 크게 보기 (새 탭)"><img class="screenshot screenshot--desktop" src="./assets/preview-today-desktop.webp" width="1440" height="900" alt="TYMO PC 오늘 실제 화면. 오늘의 일정, 과제·시험과 개인 할 일을 한곳에서 확인하는 예시입니다." loading="lazy" decoding="async"></a>
@@ -157,7 +163,10 @@
           </div>
         </div>
         <div id="study-panel" class="preview-panel" role="tabpanel" aria-labelledby="study-tab" tabindex="0" hidden>
-          <div class="preview-detail"><p>시간표에서 수업 시간을, 과제·시험 목록에서 과목별 마감을 확인해요. 같은 학업 정보를 두 기기에서 보여 줍니다.</p></div>
+          <div class="preview-detail">
+            <h3>수업 시간과 과목별 마감을 함께.</h3>
+            <ul class="preview-points"><li><strong>주간 시간표</strong><span>디자인 기초 등 이번 주 수업 시간을 살펴봐요.</span></li><li><strong>과목별 과제·시험</strong><span>직접 입력한 프로젝트 초안 제출과 중간 평가 날짜를 확인해요.</span></li></ul>
+          </div>
           <div class="preview-stage preview-pair">
             <div class="preview-device" data-device="desktop">
               <a class="screenshot-trigger" href="./assets/preview-study.webp" target="_blank" rel="noopener" aria-label="PC 시간표·과제 화면 원본 크게 보기 (새 탭)"><img class="screenshot screenshot--study" src="./assets/preview-study.webp" width="1440" height="1200" alt="TYMO PC 시간표·과제 실제 화면. 디자인 기초 수업과 같은 과목의 프로젝트 초안 제출 등 과목별 수업과 마감을 확인하는 예시입니다." loading="lazy" decoding="async"></a>
@@ -172,7 +181,10 @@
           </div>
         </div>
         <div id="work-panel" class="preview-panel" role="tabpanel" aria-labelledby="work-tab" tabindex="0" hidden>
-          <div class="preview-detail"><p>근무 시간과 완료·예정 상태를 확인해요. 합계는 완료한 근무의 금액과 예정된 근무의 예상액을 함께 포함한 참고 금액입니다.</p></div>
+          <div class="preview-detail">
+            <h3>언제 일하는지, 예상 금액은 얼마인지.</h3>
+            <ul class="preview-points"><li><strong>완료·예정 근무</strong><span>카페 근무 시간과 완료·예정 상태를 확인해요.</span></li><li><strong>참고 급여 합계</strong><span>완료한 근무의 금액과 예정 근무의 예상액을 포함해요. 실제 지급액과 다를 수 있어요.</span></li></ul>
+          </div>
           <div class="preview-stage preview-pair">
             <div class="preview-device" data-device="desktop">
               <a class="screenshot-trigger" href="./assets/preview-work.webp" target="_blank" rel="noopener" aria-label="PC 근무·급여 화면 원본 크게 보기 (새 탭)"><img class="screenshot screenshot--desktop" src="./assets/preview-work.webp" width="1440" height="900" alt="TYMO PC 근무·급여 실제 화면. 카페 근무의 완료·예정 상태와 근무 시간, 급여 합계를 확인하는 예시입니다." loading="lazy" decoding="async"></a>
@@ -232,7 +244,7 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-inner"><div><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">T</span><span>TYMO</span></a><p>Make time yours.</p></div><nav class="footer-links" aria-label="TYMO 더 알아보기"><a href="#preview">실제 화면</a><a href="#development">개발 현황</a><a href="https://github.com/rihu3/tymo_Landing" target="_blank" rel="noopener">소개 페이지 소스 <span class="new-tab-note">(새 탭)</span></a></nav><small class="copyright">© 2026 TYMO</small></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><div><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">T</span><span>TYMO</span></a><p>당신의 시간에, 여유를 더하다.</p></div><nav class="footer-links" aria-label="TYMO 더 알아보기"><a href="#preview">실제 화면</a><a href="#development">개발 현황</a><a href="https://github.com/rihu3/tymo_Landing" target="_blank" rel="noopener">소개 페이지 소스 <span class="new-tab-note">(새 탭)</span></a></nav><small class="copyright">© 2026 TYMO</small></div></footer>
 
   <dialog class="screenshot-viewer" id="screenshot-viewer" aria-labelledby="viewer-title" aria-describedby="viewer-description">
     <div class="viewer-shell">

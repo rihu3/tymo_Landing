@@ -48,11 +48,11 @@ nav { display: flex; gap: 30px; align-items: center; }
 nav a { font-size: 13px; font-weight: 550; color: var(--muted); padding-block: 12px; }
 nav a:hover { color: var(--accent); }
 .hero { display: grid; gap: 36px; padding-top: 44px; padding-bottom: 72px; }
-.hero-copy { display: grid; grid-template-columns: 1.2fr 1fr; align-items: end; gap: 64px; }
+.hero-copy { display: grid; grid-template-columns: 1.5fr 1fr; align-items: end; gap: 48px; }
 .hero-intro { padding-bottom: 6px; }
 .launch-label { display: inline-flex; gap: 8px; align-items: center; color: var(--accent); font-size: 12px; font-weight: 600; }
 .status-dot { flex: 0 0 auto; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-h1 { font-size: clamp(44px, 5.1vw, 70px); line-height: 1.14; letter-spacing: -2.9px; margin-top: 18px; }
+h1 { font-size: clamp(32px, 4.1vw, 56px); line-height: 1.2; letter-spacing: -2.2px; margin-top: 18px; }
 h1 span { color: var(--accent); }
 .hero-description { color: var(--muted); font-size: 16px; line-height: 1.85; }
 .hero-description strong { color: var(--ink); font-weight: 650; }
@@ -90,7 +90,7 @@ h1 span { color: var(--accent); }
 .day-grid::before { content: ""; position: absolute; top: 18px; bottom: 30px; left: 35px; width: 1px; background: #ccded2; }
 .day-grid article { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 20px; align-items: start; }
 .day-time { position: relative; padding: 3px 0; background: var(--bg); color: var(--accent); text-align: center; font-size: 18px; font-weight: 650; font-variant-numeric: tabular-nums; letter-spacing: -.3px; }
-.day-time--flexible { font-size: 12px; line-height: 29px; letter-spacing: 0; }
+.day-time span { display: block; margin-bottom: 2px; font-size: 12px; font-weight: 550; letter-spacing: 0; }
 .day-grid h3 { font-size: 18px; letter-spacing: -.6px; margin-bottom: 6px; }
 .day-grid p { color: var(--muted); font-size: 14px; line-height: 1.85; }
 .menu-choice { grid-column: 1 / -1; display: grid; grid-template-columns: .95fr 1.1fr; gap: 48px; padding: 24px 28px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 0 var(--radius-small) var(--radius-small) 0; }
@@ -146,8 +146,12 @@ h1 span { color: var(--accent); }
 .preview-stage { background: #edf3ef; }
 .preview-pair { display: grid; grid-template-columns: minmax(0, 3.46fr) minmax(0, 1fr); align-items: start; gap: 24px; padding: 24px; }
 .preview-pair .screenshot { border: 1px solid #ccdcd1; border-radius: var(--radius-small); }
-.preview-detail { padding: 20px 24px; }
-.preview-detail p { color: var(--muted); font-size: 15px; }
+.preview-detail { padding: 24px; }
+.preview-detail h3 { font-size: 22px; line-height: 1.45; letter-spacing: -.7px; }
+.preview-points { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 32px; margin-top: 16px; }
+.preview-points li { min-width: 0; padding-left: 14px; border-left: 2px solid var(--line); }
+.preview-points strong { display: block; font-size: 14px; font-weight: 650; }
+.preview-points span { display: block; margin-top: 3px; color: var(--muted); font-size: 14px; line-height: 1.8; }
 .new-tab-note { font-size: 12px; font-weight: 400; }
 .product-frame figcaption { padding: 16px 24px; text-align: center; font-size: 12px; color: var(--muted); border-top: 1px solid var(--line); background: #fafcfb; line-height: 1.8; }
 .development { padding-block: 72px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #f7faf8; }
@@ -190,9 +194,9 @@ h1 span { color: var(--accent); }
 @media (max-width: 1024px) {
   .container { width: calc(100% - 48px); }
   .hero { width: calc(100% - 48px); gap: 32px; }
-  .hero-copy { grid-template-columns: 1.15fr 1fr; gap: 32px; }
+  .hero-copy { grid-template-columns: 1.5fr 1fr; gap: 28px; }
   .hero-preview { width: 100%; }
-  h1 { font-size: clamp(42px, 5.6vw, 58px); letter-spacing: -2.4px; }
+  h1 { font-size: clamp(32px, 4.1vw, 42px); letter-spacing: -1.6px; }
   .hero-description { font-size: 15px; }
   .hero-actions { gap: 8px; }
   .button { padding-inline: 13px; font-size: 12px; }
@@ -216,7 +220,7 @@ h1 span { color: var(--accent); }
   .hero-screens .screenshot-link { padding-block: 6px; font-size: 12px; }
   .hero-screens .new-tab-note { display: none; }
   .preview-pair { grid-template-columns: 1fr; gap: 24px; padding: 20px; }
-  h1 { font-size: clamp(40px, 7.4vw, 56px); line-height: 1.16; }
+  h1 { font-size: clamp(32px, 6.6vw, 50px); line-height: 1.2; }
   .hero-description { font-size: 15px; }
   .hero-actions { margin-top: 22px; gap: 10px; }
   .button { font-size: 13px; padding-inline: 17px; }
@@ -238,6 +242,7 @@ h1 span { color: var(--accent); }
   .product-toolbar { position: sticky; top: var(--header-height); z-index: 5; padding: 10px; min-height: 58px; gap: 0; background: var(--surface); box-shadow: 0 4px 12px rgb(30 67 48 / .04); }
   .product-toolbar .preview-label { display: none; }
   .preview-tabs button { padding-inline: 3px; font-size: 12px; }
+  .preview-points { gap: 12px 24px; }
   .product-frame figcaption { padding-inline: 18px; font-size: 12px; }
   .development-layout { grid-template-columns: 1fr; gap: 40px; }
   .viewer-toolbar { flex-wrap: wrap; gap: 10px; padding: 12px 14px 8px; }
@@ -257,7 +262,7 @@ h1 span { color: var(--accent); }
   nav a { padding-block: 7px; font-size: 12px; }
   .launch-label { font-size: 12px; }
   .hero { width: calc(100% - 36px); padding-top: 34px; }
-  h1 { font-size: clamp(36px, 9.7vw, 48px); letter-spacing: -1.6px; margin-top: 17px; }
+  h1 { font-size: clamp(28px, 8.1vw, 42px); letter-spacing: -1.3px; margin-top: 17px; }
   .hero-description { font-size: 15px; line-height: 1.85; }
   .hero-actions { flex-wrap: nowrap; }
   .button { font-size: 13px; padding-inline: 12px; gap: 9px; min-height: 46px; }
@@ -274,6 +279,8 @@ h1 span { color: var(--accent); }
   .product-frame { margin-top: 30px; }
   .preview-pair { padding: 18px; }
   .preview-detail { padding: 18px; }
+  .preview-detail h3 { font-size: 20px; }
+  .preview-points { grid-template-columns: 1fr; gap: 12px; margin-top: 14px; }
   .footer-inner { flex-wrap: wrap; gap: 26px; }
   .footer-links { gap: 12px 22px; flex-wrap: wrap; justify-content: flex-start; }
   .copyright { width: 100%; }
