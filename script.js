@@ -2,6 +2,33 @@
 const tabs = [...document.querySelectorAll('[role="tab"]')];
 const siteHeader = document.querySelector(".site-header");
 const productFrame = document.querySelector(".product-frame");
+const siteMenu = document.querySelector(".site-menu");
+const menuToggle = siteMenu.querySelector("summary");
+const mobileMenu = matchMedia("(max-width: 768px)");
+function resetMenu() { siteMenu.open = !mobileMenu.matches; }
+resetMenu();
+mobileMenu.addEventListener("change", resetMenu);
+for (const link of siteMenu.querySelectorAll("a")) {
+  link.addEventListener("click", () => {
+    if (!mobileMenu.matches) return;
+    siteMenu.open = false;
+    const heading = document.querySelector(`${link.hash} h2`);
+    if (heading) {
+      heading.tabIndex = -1;
+      // Let the native anchor navigation finish before restoring keyboard focus.
+      requestAnimationFrame(() => heading.focus({ preventScroll: true }));
+    }
+  });
+}
+document.addEventListener("keydown", event => {
+  if (event.key !== "Escape" || !mobileMenu.matches || !siteMenu.open) return;
+  siteMenu.open = false;
+  menuToggle.focus({ preventScroll: true });
+  event.preventDefault();
+});
+document.addEventListener("click", event => {
+  if (mobileMenu.matches && siteMenu.open && !siteMenu.contains(event.target)) siteMenu.open = false;
+});
 function selectTab(tab, revealStart = false) {
   for (const item of tabs) {
     const selected = item === tab;
@@ -69,7 +96,8 @@ if (typeof viewer.showModal === "function") {
     const caption = link.closest(".preview-device").querySelector(".device-caption").textContent;
     link.setAttribute("aria-label", `${caption} 화면 크게 보기`);
     link.setAttribute("aria-haspopup", "dialog");
-    if (link.classList.contains("screenshot-link")) link.textContent = "크게 보기";
+    const newTabNote = link.querySelector(".new-tab-note");
+    if (newTabNote) newTabNote.hidden = true;
     link.addEventListener("click", event => {
       if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
