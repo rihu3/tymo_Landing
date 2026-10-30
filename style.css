@@ -52,6 +52,7 @@ h1 { font-size: clamp(38px, 4.25vw, 59px); line-height: 1.23; letter-spacing: -3
 h1 span { color: var(--accent); }
 .hero-description { color: var(--muted); font-size: 15px; line-height: 1.85; margin-top: 24px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.hero-note { color: var(--muted); font-size: 13px; line-height: 1.7; margin-top: 16px; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 16px; min-height: 48px; padding: 11px 18px; border: 1px solid transparent; border-radius: var(--radius-small); font-size: 13px; font-weight: 650; white-space: nowrap; }
 .button svg { width: 17px; height: 17px; }
 .button-primary { background: var(--accent); color: white; }
@@ -87,7 +88,7 @@ h1 span { color: var(--accent); }
 .mini-schedule small { display: block; font-size: 9px; margin-top: 3px; color: var(--muted); }
 .mini-reminder { display: flex; align-items: center; gap: 8px; padding-top: 17px; font-size: 10px; color: var(--muted); }
 .check-symbol { display: grid; place-items: center; flex: 0 0 auto; width: 20px; height: 20px; background: var(--accent-soft); color: var(--accent); border-radius: 50%; font-weight: 700; }
-.hero-preview figcaption { text-align: center; padding: 12px 0; color: var(--muted); font-size: 10px; }
+.hero-preview figcaption { text-align: center; padding: 12px 0; color: var(--muted); font-size: 12px; }
 .about { border-top: 1px solid var(--line); }
 .section-heading h2 { font-size: clamp(29px, 3.1vw, 42px); line-height: 1.35; letter-spacing: -1.7px; }
 .section-heading > p:not(.eyebrow) { color: var(--muted); font-size: 14px; line-height: 1.85; margin-top: 20px; }
@@ -106,6 +107,10 @@ h1 span { color: var(--accent); }
 .feature-icon { display: inline-grid; place-items: center; width: 40px; height: 40px; background: var(--accent-soft); color: var(--accent); border-radius: var(--radius-small); margin-bottom: 23px; }
 .feature-card h3 { font-size: 20px; letter-spacing: -.9px; }
 .feature-card > p { font-size: 13px; line-height: 1.8; color: var(--muted); margin-top: 10px; }
+.feature-steps { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; counter-reset: step; }
+.feature-steps li { display: inline-flex; align-items: center; gap: 7px; padding: 5px 10px 5px 6px; border-radius: 999px; background: var(--bg); color: var(--ink); font-size: 12px; font-weight: 550; line-height: 1.4; counter-increment: step; }
+.feature-steps li::before { content: counter(step); display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-size: 11px; font-weight: 700; }
+.feature-assistant .feature-steps li { background: var(--surface); }
 .feature-visual { margin-top: 30px; }
 .calendar-visual { display: grid; grid-template-columns: repeat(5, 1fr); gap: 9px; }
 .calendar-visual > span { text-align: center; border-radius: var(--radius-small); font-size: 10px; color: var(--muted); background: var(--bg); padding: 12px 4px; height: 88px; }
@@ -128,7 +133,7 @@ h1 span { color: var(--accent); }
 .device-phone { width: 42px; height: 66px; border-radius: 8px; padding: 6px; }
 .device-visual span { height: 8px; width: 70%; border-radius: 2px; background: #95b4a3; }
 .device-visual i { height: 8px; border-radius: 2px; background: #dbe9df; }
-.section-note { text-align: center; color: var(--muted); font-size: 11px; margin-top: 23px; }
+.section-note { text-align: center; color: var(--muted); font-size: 12px; margin-top: 23px; }
 .product-frame { margin-top: 42px; background: var(--surface); border: 1px solid #ccdcd1; border-radius: var(--radius); box-shadow: 0 18px 60px rgb(30 67 48 / .06); overflow: hidden; }
 .product-toolbar { min-height: 68px; display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; gap: 14px; border-bottom: 1px solid var(--line); }
 .preview-brand { font-size: 16px; }
@@ -177,7 +182,7 @@ h1 span { color: var(--accent); }
 .free-time h4 { color: var(--accent); }
 .free-time p { font-size: 10px; line-height: 1.8; color: var(--muted); margin-top: 7px; }
 .free-time > span:last-child { display: block; color: var(--muted); font-size: 9px; margin-top: 10px; }
-.product-frame figcaption { padding: 15px 24px; text-align: center; font-size: 10px; color: var(--muted); border-top: 1px solid var(--line); background: #fafcfb; }
+.product-frame figcaption { padding: 15px 24px; text-align: center; font-size: 12px; color: var(--muted); border-top: 1px solid var(--line); background: #fafcfb; }
 .example-month-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 18px; }
 .example-month-heading > span { font-size: 10px; color: var(--muted); }
 .example-calendar { border: 1px solid var(--line); border-radius: var(--radius-small); overflow: hidden; }
@@ -191,10 +196,16 @@ h1 span { color: var(--accent); }
 .calendar-dates b { display: inline-grid; place-items: center; width: 18px; height: 18px; background: var(--accent); color: white; border-radius: 50%; }
 .calendar-dates div > span { display: block; font-size: 8px; padding: 2px 4px; margin-top: 3px; border-radius: 3px; background: #edf3ef; color: var(--accent); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .calendar-dates div > .work-example { background: #d8e8dd; color: #224b39; }
-.calendar-footnote { font-size: 10px; color: var(--muted); margin-top: 16px; }
+.calendar-footnote { font-size: 12px; color: var(--muted); margin-top: 16px; }
 .development { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #f0f5f1; }
 .development-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 76px; align-items: start; }
-.development-note { display: flex; align-items: center; gap: 9px; color: var(--accent); font-size: 11px; margin-top: 32px; }
+.development-note { display: flex; align-items: center; gap: 9px; color: var(--accent); font-size: 12px; margin-top: 28px; }
+.availability { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 28px 0 0; word-break: keep-all; }
+.availability > div { padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius-small); background: var(--surface); }
+.availability dt { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+.availability-now dt { color: var(--accent); }
+.availability dd { margin: 0; font-size: 13px; line-height: 1.7; color: var(--muted); }
+.availability dd + dd { margin-top: 4px; }
 .development-list { display: grid; gap: 0; }
 .development-list li { position: relative; display: grid; grid-template-columns: 26px 1fr auto; gap: 14px; padding: 0 0 30px; }
 .development-list li:not(:last-child)::before { content: ""; position: absolute; left: 12px; top: 31px; bottom: 5px; width: 1px; background: #cbdcd1; }
@@ -203,15 +214,17 @@ h1 span { color: var(--accent); }
 .in-progress .milestone-mark { border-color: var(--accent); }
 .in-progress .milestone-mark > span { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 .development-list h3 { font-size: 14px; letter-spacing: -.3px; }
-.development-list p { font-size: 11px; color: var(--muted); margin-top: 4px; }
-.milestone-state { color: var(--muted); font-size: 9px; padding-top: 5px; white-space: nowrap; }
+.development-list p { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.milestone-state { color: var(--muted); font-size: 11px; padding-top: 4px; white-space: nowrap; }
 .in-progress .milestone-state { color: var(--accent); font-weight: 700; }
+.paused .milestone-mark { border-style: dashed; }
+.paused .milestone-state { color: var(--ink); font-weight: 650; }
 .coming-soon { text-align: center; }
 .coming-inner > .brand-mark { width: 44px; height: 44px; border-radius: 12px; font-size: 31px; }
 .coming-inner > p:first-of-type { font-size: 12px; color: var(--accent); margin-top: 21px; }
 .coming-inner h2 { font-size: clamp(30px, 4.2vw, 49px); line-height: 1.3; letter-spacing: -1.5px; margin-top: 16px; }
 .coming-description { color: var(--muted); font-size: 14px; line-height: 1.85; margin-top: 23px; }
-.coming-status { display: inline-block; font-size: 11px; margin-top: 30px; color: var(--muted); padding: 8px 13px; background: var(--accent-soft); border-radius: 6px; }
+.coming-status { display: inline-block; font-size: 12px; margin-top: 30px; color: var(--muted); padding: 8px 13px; background: var(--accent-soft); border-radius: 6px; }
 .site-footer { border-top: 1px solid var(--line); padding-block: 35px; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 30px; }
 .footer-inner .brand { font-size: 18px; }
@@ -248,7 +261,7 @@ h1 span { color: var(--accent); }
   .brand { font-size: 18px; gap: 7px; }
   .brand-mark { width: 28px; height: 28px; font-size: 21px; border-radius: 8px; }
   nav { gap: 18px; }
-  nav a { font-size: 11px; }
+  nav a { display: inline-flex; align-items: center; min-height: 44px; padding-block: 0; font-size: 13px; }
   .hero { grid-template-columns: 1fr; padding-top: 42px; padding-bottom: 60px; gap: 38px; }
   .hero-copy { max-width: 560px; }
   h1 { font-size: clamp(38px, 7.2vw, 54px); line-height: 1.25; }
@@ -262,7 +275,7 @@ h1 span { color: var(--accent); }
   .mini-schedule li { grid-template-columns: 42px 1fr; gap: 10px; }
   .mini-schedule strong { font-size: 12px; }
   .mini-schedule small, .mini-schedule time { font-size: 10px; }
-  .hero-preview figcaption, .mini-reminder { font-size: 11px; }
+  .mini-reminder { font-size: 11px; }
   .section-heading h2 { font-size: 32px; }
   .problem-grid { gap: 25px; margin-top: 35px; }
   .problem-grid p { font-size: 12px; }
@@ -274,19 +287,21 @@ h1 span { color: var(--accent); }
   .mock-sidebar { display: none; }
   .product-content { padding: 22px; }
   .product-toolbar { padding: 15px 22px; min-height: 58px; }
-  .product-frame figcaption { padding-inline: 18px; font-size: 11px; }
+  .product-frame figcaption { padding-inline: 18px; }
+  .feature-card .desktop-break { display: none; }
   .development-layout { grid-template-columns: 1fr; gap: 40px; }
   .development-list li { padding-bottom: 28px; }
 }
 @media (max-width: 520px) {
   .container { width: calc(100% - 36px); }
-  .header-inner { min-height: 78px; flex-wrap: wrap; gap: 2px; padding-block: 11px; }
+  .header-inner { min-height: 78px; flex-wrap: wrap; gap: 0; padding-block: 8px 2px; }
   .header-inner > .brand { width: 100%; font-size: 16px; }
   .header-inner > .brand .brand-mark { width: 24px; height: 24px; font-size: 18px; border-radius: 7px; }
   nav { width: 100%; gap: 0; justify-content: space-between; }
-  nav a { padding-block: 7px; font-size: 11px; }
+  nav a { min-height: 44px; font-size: 13px; }
   html { scroll-padding-top: 113px; }
-  .launch-label { font-size: 10px; }
+  .launch-label { font-size: 12px; }
+  .hero-actions + .hero-note { font-size: 12px; }
   .hero { padding-top: 34px; }
   h1 { font-size: clamp(34px, 8.4vw, 43px); letter-spacing: -1.8px; margin-top: 21px; }
   .hero-description { font-size: 13px; line-height: 1.85; margin-top: 21px; }
@@ -302,7 +317,7 @@ h1 span { color: var(--accent); }
   .mini-schedule strong { font-size: 11px; }
   .mini-summary { gap: 15px; font-size: 9px; }
   .mini-summary b { font-size: 11px; margin-left: 3px; }
-  .mini-reminder, .hero-preview figcaption { font-size: 9px; }
+  .mini-reminder { font-size: 9px; }
   .section-heading h2 { font-size: 29px; }
   .section-heading > p:not(.eyebrow) { font-size: 13px; }
   .problem-grid { grid-template-columns: 1fr; gap: 22px; }
@@ -317,7 +332,7 @@ h1 span { color: var(--accent); }
   .feature-card h3 { font-size: 18px; }
   .feature-icon { margin-bottom: 19px; }
   .feature-visual { margin-top: 25px; }
-  .section-note { font-size: 10px; text-align: left; }
+  .section-note { text-align: left; }
   .product-frame { margin-top: 30px; }
   .product-toolbar { padding: 14px; }
   .product-toolbar > .preview-label { font-size: 8px; }
@@ -345,11 +360,9 @@ h1 span { color: var(--accent); }
   .example-month-heading > span { font-size: 9px; }
   .development-list li { gap: 12px; }
   .development-list h3 { font-size: 13px; }
-  .development-list p { font-size: 10px; }
-  .milestone-state { font-size: 8px; }
+  .availability { grid-template-columns: 1fr; }
   .coming-inner h2 { font-size: clamp(26px, 7vw, 36px); letter-spacing: -1px; }
   .coming-description { font-size: 13px; }
-  .coming-status { font-size: 10px; }
   .footer-inner { flex-wrap: wrap; gap: 26px; }
   .footer-links { gap: 22px; }
   .copyright { width: 100%; }
