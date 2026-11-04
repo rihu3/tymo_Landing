@@ -1,5 +1,6 @@
 // Preview controls change example panels only. No account, API, or data storage.
 const tabs = [...document.querySelectorAll('[role="tab"]')];
+const titles = ["오늘의 작은 계획", "한눈에 보는 이번 달", "이번 학기 수업", "이번 주 근무 기록"];
 function selectTab(tab) {
   for (const item of tabs) {
     const selected = item === tab;
@@ -7,10 +8,10 @@ function selectTab(tab) {
     item.tabIndex = selected ? 0 : -1;
     document.getElementById(item.getAttribute("aria-controls")).hidden = !selected;
   }
-  const month = tab.id === "month-tab";
+  const index = tabs.indexOf(tab);
   document.querySelector(".mock-sidebar .mock-active")?.classList.remove("mock-active");
-  document.querySelectorAll(".mock-sidebar > span")[month ? 1 : 0].classList.add("mock-active");
-  document.querySelector(".product-topline h3").textContent = month ? "한눈에 보는 이번 달" : "오늘의 작은 계획";
+  document.querySelectorAll(".mock-sidebar > span")[index]?.classList.add("mock-active");
+  document.querySelector(".product-topline h3").textContent = titles[index];
 }
 for (const [index, tab] of tabs.entries()) {
   tab.disabled = false;
