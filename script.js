@@ -29,6 +29,16 @@ for (const [index, tab] of tabs.entries()) {
   });
 }
 
+// Flow cards open the matching example tab. Hidden without JavaScript, where the tabs cannot switch.
+for (const link of document.querySelectorAll(".flow-link")) {
+  const tab = document.getElementById(link.dataset.tab);
+  link.hidden = false;
+  link.addEventListener("click", () => {
+    selectTab(tab);
+    requestAnimationFrame(() => tab.focus({ preventScroll: true }));
+  });
+}
+
 if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
   const observer = new IntersectionObserver(entries => {
     for (const entry of entries) {

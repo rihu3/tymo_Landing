@@ -19,6 +19,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="TYMO. 당신의 시간에, 여유를 더하다. 개발 중인 개인 일정 관리 앱. 약속과 할 일, 수업 시간표, 근무를 한 달력에서 날짜별로.">
   <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"TYMO","url":"https://tymo.kr/","inLanguage":"ko-KR","description":"약속·할 일, 수업 시간표, 근무 기록을 한 달력에서 날짜별로 확인하는 개인 일정 관리 앱 TYMO의 소개 페이지입니다. 정식 공개 전 개발 중입니다."}</script>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./style.css">
   <script src="./script.js" defer></script>
@@ -58,7 +59,7 @@
 
       <figure class="hero-preview" aria-label="TYMO 주간 화면의 가상 미리보기">
         <div class="mini-window">
-          <div class="mini-titlebar"><span class="mini-brand">TYMO</span><span class="preview-label">Concept UI</span></div>
+          <div class="mini-titlebar"><span class="mini-brand">TYMO</span><span class="preview-label">콘셉트 화면</span></div>
           <div class="mini-content">
             <div class="mini-heading"><div><p>10월 5일 - 11일</p><h2>이번 주, 한 달력에.</h2></div><span class="sun-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></span></div>
             <div class="mini-summary"><span>수업 <b>4</b></span><span>근무 <b>2</b></span><span>마감 <b>1</b></span><span>약속 <b>1</b></span></div>
@@ -79,22 +80,25 @@
 
     <section class="features section" id="features" aria-labelledby="features-heading">
       <div class="container">
-        <div class="section-heading reveal"><h2 id="features-heading">일정은 흩어져 있어도,<br>하루는 하나니까.</h2><p>수업은 시간표에, 근무는 메모에, 할 일은 머릿속에 흩어져 있다면<br>TYMO가 한 달력으로 모아 드려요. 개발 중인 세 가지 사용 흐름입니다.</p></div>
+        <div class="section-heading reveal"><p class="eyebrow">사용 흐름</p><h2 id="features-heading">일정은 흩어져 있어도,<br>하루는 하나니까.</h2><p>수업은 시간표에, 근무는 메모에, 할 일은 머릿속에 흩어져 있다면<br>TYMO가 한 달력으로 모아 드려요. 개발 중인 세 가지 사용 흐름입니다.</p></div>
         <div class="feature-grid">
           <article class="feature-card feature-calendar reveal">
             <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4v16M4 8h4m-4 8h4m5-10h7m-7 6h7m-7 6h4"/></svg></span>
             <h3>시간표의 수업을, 달력으로.</h3><p>시간표에서 ‘일정에 적용’을 누르면 학기 동안의 수업이 달력에 들어가요.</p>
             <dl class="flow-example"><div><dt>입력</dt><dd>월요일과 수요일 09:00 디자인 기초</dd></div><div><dt>결과</dt><dd>학기 동안 월요일과 수요일 달력에 수업 표시</dd></div></dl>
+            <a class="flow-link" href="#preview" data-tab="timetable-tab" hidden>시간표 예시 보기 <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
           </article>
           <article class="feature-card feature-plan reveal">
             <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4m10-4v4M3 10h18m-11 5 2 2 4-4"/></svg></span>
             <h3>과제와 시험을, 오늘의 마감으로.</h3><p>수업에 연결해 입력하면 마감일에 오늘 화면과 월간 달력에 함께 보여요.</p>
             <dl class="flow-example"><div><dt>입력</dt><dd>디자인 기초 과제, 10월 8일 마감</dd></div><div><dt>결과</dt><dd>10월 8일 오늘 화면에서 마감 확인</dd></div></dl>
+            <a class="flow-link" href="#preview" data-tab="month-tab" hidden>월간 예시 보기 <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
           </article>
           <article class="feature-card feature-assistant reveal">
             <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7h18v12H3z"/><path d="M8 7V5h8v2M3 12h18"/></svg></span>
             <h3>근무를 기록하면, 참고 급여까지.</h3><p>입력한 시급 등의 조건으로 공제 전 참고 금액을 계산해요. 실제 수령액과 다를 수 있습니다.</p>
             <dl class="flow-example"><div><dt>입력</dt><dd>휴게 제외 유급 4시간, 시급 11,000원, 추가 수당 없음</dd></div><div><dt>결과</dt><dd>공제 전 참고 급여 44,000원</dd></div></dl>
+            <a class="flow-link" href="#preview" data-tab="work-tab" hidden>근무 예시 보기 <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
           </article>
         </div>
         <p class="section-note">소개된 기능은 개발 방향이며, 정식 공개 시 구성과 동작이 달라질 수 있습니다.</p>
@@ -102,9 +106,9 @@
     </section>
 
     <section class="product section container" id="preview" aria-labelledby="preview-heading">
-      <div class="section-heading reveal"><p class="eyebrow">PRODUCT PREVIEW</p><h2 id="preview-heading">한눈에 오늘을.<br>한결 가볍게 내일을.</h2><p>위의 세 가지 흐름이 오늘·월간·시간표·근무 화면에서 어떻게 보이는지 예시로 보여 드려요.<br>입력이나 저장은 되지 않는 정적인 예시 화면입니다.</p></div>
+      <div class="section-heading reveal"><p class="eyebrow">예시 화면</p><h2 id="preview-heading">한눈에 오늘을.<br>한결 가볍게 내일을.</h2><p>위의 세 가지 흐름이 오늘·월간·시간표·근무 화면에서 어떻게 보이는지 예시로 보여 드려요.<br>입력이나 저장은 되지 않는 정적인 예시 화면입니다.</p></div>
       <figure class="product-frame reveal">
-        <div class="product-toolbar"><div class="brand preview-brand"><span class="brand-mark" aria-hidden="true">T</span><span>TYMO</span></div><span class="preview-label">Concept UI · 예시 데이터</span></div>
+        <div class="product-toolbar"><div class="brand preview-brand"><span class="brand-mark" aria-hidden="true">T</span><span>TYMO</span></div><span class="preview-label">콘셉트 화면 · 예시 데이터</span></div>
         <div class="product-layout">
           <aside class="mock-sidebar" aria-hidden="true"><p>내 하루</p><span class="mock-active">오늘</span><span>월간</span><span>시간표</span><span>근무</span><div class="sidebar-bottom">Make time yours.</div></aside>
           <div class="product-content">
@@ -162,28 +166,25 @@
 
     <section class="development section" id="development" aria-labelledby="development-heading">
       <div class="container development-layout">
-        <div class="section-heading reveal"><p class="eyebrow">WORK IN PROGRESS</p><h2 id="development-heading">지금 이용할 수 있는<br>범위를 알려 드려요.</h2><p>TYMO는 정식 공개 전이며 핵심 기능을 개발하고 다듬고 있습니다.<br>공개 베타는 현재 보류 중이고, 재개 일정은 정해지지 않았습니다.</p>
+        <div class="section-heading reveal"><p class="eyebrow">이용 안내</p><h2 id="development-heading">지금 이용할 수 있는<br>범위를 알려 드려요.</h2><p>TYMO는 정식 오픈 전이며 핵심 기능을 개발하고 다듬고 있습니다.<br>출시 일정은 정해지면 이 페이지에서 안내합니다.<br>공개 베타는 현재 보류 중이고, 재개 일정은 정해지지 않았습니다.</p>
           <dl class="availability">
             <div class="availability-now"><dt>지금 할 수 있는 것</dt><dd>서비스 소개와 사용 흐름 읽기</dd><dd>예시 화면 둘러보기(입력·저장 불가)</dd></div>
             <div class="availability-later"><dt>아직 제공하지 않는 것</dt><dd>회원 가입과 로그인</dd><dd>앱 다운로드와 실제 일정 저장</dd></div>
           </dl>
-          <span class="coming-status">정식 오픈 전 · 출시 일정은 추후 안내</span>
         </div>
         <div class="development-side reveal">
           <h3 class="side-heading">플랫폼별 준비 상태</h3>
           <dl class="platform-status">
-            <div><dt>웹</dt><dd>공개 준비 중</dd></div>
+            <div class="is-next"><dt>웹</dt><dd>공개 준비 중</dd></div>
             <div class="is-active"><dt>Android</dt><dd>개발 중</dd></div>
-            <div><dt>iOS</dt><dd>지원 계획</dd></div>
+            <div class="is-planned"><dt>iOS</dt><dd>지원 계획</dd></div>
             <div class="is-active"><dt>Windows</dt><dd>개발 중</dd></div>
-            <div><dt>macOS</dt><dd>지원 계획</dd></div>
+            <div class="is-planned"><dt>macOS</dt><dd>지원 계획</dd></div>
           </dl>
-          <p class="platform-note">iPhone에서는 웹으로 이용하는 방식을 준비하고 있어요. 별도 iOS 앱은 지원 계획 단계이며 아직 설치할 수 없습니다.</p>
+          <p class="platform-note">iPhone에서는 웹으로 이용하는 방식을 준비하고 있어요.<br>별도 iOS 앱은 지원 계획 단계이며 아직 설치할 수 없습니다.</p>
           <h3 class="side-heading">개발 단계</h3>
           <ol class="development-list" aria-label="TYMO 개발 현황">
-            <li class="complete"><span class="milestone-mark" aria-hidden="true">✓</span><h4>서비스 기획</h4><span class="milestone-state">완료</span></li>
-            <li class="complete"><span class="milestone-mark" aria-hidden="true">✓</span><h4>기본 UI 설계</h4><span class="milestone-state">완료</span></li>
-            <li class="complete"><span class="milestone-mark" aria-hidden="true">✓</span><h4>프로젝트 구조 설계</h4><span class="milestone-state">완료</span></li>
+            <li class="complete"><span class="milestone-mark" aria-hidden="true">✓</span><h4>서비스 기획 · 기본 UI · 프로젝트 구조 설계</h4><span class="milestone-state">완료</span></li>
             <li class="in-progress"><span class="milestone-mark" aria-hidden="true"><span></span></span><h4>핵심 기능 개발</h4><span class="milestone-state">진행 중</span></li>
             <li class="upcoming"><span class="milestone-mark" aria-hidden="true"></span><h4>통합 테스트와 사용성 점검</h4><span class="milestone-state">개발과 병행</span></li>
             <li class="paused"><span class="milestone-mark" aria-hidden="true"></span><h4>공개 베타</h4><span class="milestone-state">보류</span></li>
