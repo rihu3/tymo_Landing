@@ -41,6 +41,7 @@ ol, ul { margin: 0; padding: 0; list-style: none; }
 @supports (backdrop-filter: blur(16px)) { .site-header { background: rgb(246 249 247 / .82); backdrop-filter: blur(16px); } }
 .header-inner { min-height: 80px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 750; font-size: 21px; letter-spacing: -.7px; }
+a.brand { min-height: 44px; }
 .brand-mark { display: inline-grid; place-items: center; width: 32px; height: 32px; background: var(--accent); color: white; font-size: 23px; font-weight: 800; line-height: 1; border-radius: 9px; letter-spacing: -1px; }
 nav { display: flex; gap: 30px; align-items: center; }
 nav a { font-size: 13px; font-weight: 550; color: var(--muted); padding-block: 12px; }
@@ -295,12 +296,14 @@ h1 span { color: var(--accent); }
 @media (max-width: 520px) {
   :root { --section-space: 60px; }
   .container { width: calc(100% - 36px); }
-  .header-inner { min-height: 78px; flex-wrap: wrap; gap: 0; padding-block: 8px 2px; }
-  .header-inner > .brand { width: 100%; font-size: 16px; }
-  .header-inner > .brand .brand-mark { width: 24px; height: 24px; font-size: 18px; border-radius: 7px; }
-  nav { width: 100%; gap: 0; justify-content: space-between; }
-  nav a { min-height: 44px; font-size: 13px; }
-  html { scroll-padding-top: 113px; }
+  .header-inner { min-height: 60px; gap: 12px; padding-block: 8px; }
+  .header-inner > .brand { flex-shrink: 0; min-width: 44px; min-height: 44px; font-size: 16px; }
+  .header-inner > .brand .brand-mark { width: 28px; height: 28px; font-size: 20px; border-radius: 8px; }
+  .site-header nav { gap: 6px; }
+  .site-header nav a { min-height: 44px; padding-inline: 4px; font-size: 14px; font-weight: 600; color: var(--ink); white-space: nowrap; border-radius: 6px; }
+  .site-header nav a:hover, .site-header nav a:active { color: var(--accent); background: var(--accent-soft); }
+  .site-header a:focus-visible { outline-offset: 2px; }
+  html { scroll-padding-top: 80px; }
   .launch-label { font-size: 12px; }
   .hero { padding-top: 34px; }
   h1 { font-size: clamp(34px, 8.4vw, 43px); letter-spacing: -1.8px; margin-top: 21px; }
@@ -368,6 +371,10 @@ h1 span { color: var(--accent); }
   .footer-inner { flex-wrap: wrap; gap: 26px; }
   .footer-links { gap: 22px; }
   .copyright { width: 100%; }
+}
+@media (max-width: 340px) {
+  .header-inner > .brand { justify-content: center; }
+  .header-inner > .brand > span:not(.brand-mark) { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
