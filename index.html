@@ -57,24 +57,22 @@
         </div>
       </div>
 
-      <figure class="hero-preview" aria-label="TYMO 주간 화면의 가상 미리보기">
+      <figure class="hero-preview" aria-label="TYMO 웹 일정 목록 화면의 가상 미리보기">
         <div class="mini-window">
-          <div class="mini-titlebar"><span class="mini-brand">TYMO</span><span class="preview-label">콘셉트 화면</span></div>
+          <div class="mini-titlebar"><span class="mini-title">2026년 10월</span><span class="app-seg" aria-hidden="true"><span>달력</span><span class="is-on">목록</span><span>주간</span></span></div>
           <div class="mini-content">
-            <div class="mini-heading"><div><p>10월 5일 - 11일</p><h2>이번 주, 한 달력에.</h2></div><span class="sun-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></span></div>
-            <div class="mini-summary"><span>수업 <b>4</b></span><span>근무 <b>2</b></span><span>마감 <b>1</b></span><span>약속 <b>1</b></span></div>
+            <div class="mini-heading"><h2>2026년 10월 일정</h2><p>10월 5일부터 10일까지</p></div>
             <ol class="mini-week">
-              <li><span class="mini-day">월 <b>5</b></span><div><span class="mini-item"><span class="small-tag">수업</span>디자인 기초 09:00</span></div></li>
-              <li><span class="mini-day">화 <b>6</b></span><div><span class="mini-item"><span class="small-tag">수업</span>대학 글쓰기 11:00</span></div></li>
-              <li><span class="mini-day">수 <b>7</b></span><div><span class="mini-item"><span class="small-tag">수업</span>디자인 기초 09:00</span><span class="mini-item is-work"><span class="small-tag">근무</span>카페 오후 근무 13:00</span></div></li>
-              <li><span class="mini-day">목 <b>8</b></span><div><span class="mini-item"><span class="small-tag">수업</span>통계 입문 14:00</span><span class="mini-item is-due"><span class="small-tag">마감</span>디자인 기초 과제</span></div></li>
-              <li><span class="mini-day">금 <b>9</b></span><div><span class="mini-item is-work"><span class="small-tag">근무</span>카페 오후 근무 13:00</span></div></li>
-              <li><span class="mini-day">토 <b>10</b></span><div><span class="mini-item"><span class="small-tag">약속</span>친구와 점심 12:30</span></div></li>
+              <li><span class="mini-day"><small>10월</small><b>5일 월</b></span><div><span class="mini-item is-class"><time>09:00–10:30</time><span>디자인 기초</span></span></div></li>
+              <li><span class="mini-day"><small>10월</small><b>6일 화</b></span><div><span class="mini-item is-writing"><time>11:00–12:15</time><span>대학 글쓰기</span></span></div></li>
+              <li class="is-today"><span class="mini-day"><small>10월</small><b>7일 수</b></span><div><span class="mini-item is-class"><time>09:00–10:30</time><span>디자인 기초</span></span><span class="mini-item is-work"><time>13:00–17:00</time><span>카페 오후 근무</span></span><span class="mini-item is-personal"><time>19:00–19:30</time><span>가볍게 산책하기</span></span></div></li>
+              <li><span class="mini-day"><small>10월</small><b>8일 목</b></span><div><span class="mini-item is-task"><time>시간 미정</time><span>과제 · 디자인 기초 과제</span></span><span class="mini-item is-stats"><time>14:00–15:15</time><span>통계 입문</span></span></div></li>
+              <li><span class="mini-day"><small>10월</small><b>9일 금</b></span><div><span class="mini-item is-work"><time>13:00–17:00</time><span>카페 오후 근무</span></span></div></li>
+              <li><span class="mini-day"><small>10월</small><b>10일 토</b></span><div><span class="mini-item is-social"><time>12:30–13:30</time><span>친구와 점심</span></span></div></li>
             </ol>
-            <div class="mini-reminder"><span class="check-symbol" aria-hidden="true">✓</span><span>수업·과제·근무·약속이 날짜별로 한곳에.</span></div>
           </div>
         </div>
-        <figcaption>앞으로의 TYMO를 담은 예시 화면입니다. 실제 화면과 다를 수 있어요.</figcaption>
+        <figcaption>TYMO 웹의 일정 목록 화면을 바탕으로 만든 예시입니다. 실제 화면과 다를 수 있어요.</figcaption>
       </figure>
     </section>
 
@@ -106,61 +104,105 @@
     </section>
 
     <section class="product section container" id="preview" aria-labelledby="preview-heading">
-      <div class="section-heading reveal"><p class="eyebrow">예시 화면</p><h2 id="preview-heading">한눈에 오늘을.<br>한결 가볍게 내일을.</h2><p>위의 세 가지 흐름이 오늘·월간·시간표·근무 화면에서 어떻게 보이는지 예시로 보여 드려요.<br>입력이나 저장은 되지 않는 정적인 예시 화면입니다.</p></div>
+      <div class="section-heading reveal"><p class="eyebrow">예시 화면</p><h2 id="preview-heading">한눈에 오늘을.<br>한결 가볍게 내일을.</h2><p>위의 세 가지 흐름이 TYMO 웹의 오늘·월간·시간표·근무 화면에서 어떻게 보이는지 예시로 보여 드려요.<br>입력이나 저장은 되지 않는 정적인 예시 화면입니다.</p></div>
       <figure class="product-frame reveal">
-        <div class="product-toolbar"><div class="brand preview-brand"><span class="brand-mark" aria-hidden="true">T</span><span>TYMO</span></div><span class="preview-label">콘셉트 화면 · 예시 데이터</span></div>
-        <div class="product-layout">
-          <aside class="mock-sidebar" aria-hidden="true"><p>내 하루</p><span class="mock-active">오늘</span><span>월간</span><span>시간표</span><span>근무</span><div class="sidebar-bottom">Make time yours.</div></aside>
-          <div class="product-content">
-            <div class="product-topline"><div><p>2026년 10월 7일 수요일</p><h3>오늘의 작은 계획</h3></div><div class="preview-tabs" role="tablist" aria-label="예시 화면 전환"><button id="today-tab" role="tab" aria-controls="today-panel" aria-selected="true" tabindex="0" disabled>오늘</button><button id="month-tab" role="tab" aria-controls="month-panel" aria-selected="false" tabindex="-1" disabled>월간</button><button id="timetable-tab" role="tab" aria-controls="timetable-panel" aria-selected="false" tabindex="-1" disabled>시간표</button><button id="work-tab" role="tab" aria-controls="work-panel" aria-selected="false" tabindex="-1" disabled>근무</button></div></div>
+        <div class="product-toolbar"><span class="preview-label">TYMO 웹 화면 예시 · 예시 데이터</span><div class="preview-tabs" role="tablist" aria-label="예시 화면 전환"><button id="today-tab" role="tab" aria-controls="today-panel" aria-selected="true" tabindex="0" disabled>오늘</button><button id="month-tab" role="tab" aria-controls="month-panel" aria-selected="false" tabindex="-1" disabled>월간</button><button id="timetable-tab" role="tab" aria-controls="timetable-panel" aria-selected="false" tabindex="-1" disabled>시간표</button><button id="work-tab" role="tab" aria-controls="work-panel" aria-selected="false" tabindex="-1" disabled>근무</button></div></div>
+        <div class="app-shot">
+          <div class="app-rail" aria-hidden="true"><span class="app-logo">T</span><span class="rail-item is-active" data-rail="today"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 2"/></svg>오늘</span><span class="rail-item" data-rail="calendar"><svg viewBox="0 0 24 24"><rect x="5" y="6" width="14" height="13" rx="3"/><path d="M5 11h14M9 4v4m6-4v4"/></svg>달력</span><span class="rail-item"><svg viewBox="0 0 24 24"><path d="M4 8h9m4 0h3M4 16h3m4 0h9"/><circle cx="15" cy="8" r="2"/><circle cx="9" cy="16" r="2"/></svg>설정</span></div>
+          <div class="app-main">
             <div id="today-panel" class="preview-panel" role="tabpanel" aria-labelledby="today-tab" tabindex="0">
-              <div class="preview-overview"><div><span>오늘 일정</span><strong>3개</strong><small>수업, 근무, 나를 위한 시간</small></div><div><span>오늘 할 일</span><strong>1/3</strong><small>작은 일부터 하나씩</small></div><div><span>다가오는 마감</span><strong>내일</strong><small>디자인 기초 과제</small></div></div>
-              <div class="preview-columns">
-                <section class="day-list" aria-labelledby="example-schedule"><div class="mock-section-heading"><h4 id="example-schedule">오늘의 일정</h4><span>시간순으로 보기</span></div><ol><li><time>09:00</time><div><span class="small-tag">수업</span><h5>디자인 기초</h5><p>09:00 - 10:30 · 강의실 302</p></div></li><li><time>13:00</time><div><span class="small-tag">근무</span><h5>카페 오후 근무</h5><p>13:00 - 17:00 · 느린 오후</p></div></li><li><time>19:00</time><div><span class="small-tag">개인</span><h5>가볍게 산책하기</h5><p>19:00 - 19:30 · 동네 공원</p></div></li></ol></section>
-                <div class="preview-right"><section class="todo-list" aria-labelledby="example-todo"><h4 id="example-todo">오늘 할 일</h4><ul><li><span class="mock-check checked" aria-hidden="true">✓</span><span><s>수업 노트 정리</s><small>완료</small></span></li><li><span class="mock-check" aria-hidden="true"></span><span>디자인 기초 과제<small>내일 마감 · 먼저 챙기기</small></span></li><li><span class="mock-check" aria-hidden="true"></span><span>읽고 싶은 책 고르기<small>여유가 생기면</small></span></li></ul></section><section class="free-time"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13c0-6 4-9 14-10 0 10-3 15-9 15m-5 3L16 7"/></svg></span><h4>일정 사이, 나를 위한 시간</h4><p>10:30 - 12:30에는 일정이 없어요.<br>과제를 시작하거나 잠깐 쉬어 가요.</p><span>빈 시간을 활용하는 예시</span></section></div>
+              <h3 class="app-title">오늘</h3>
+              <ol class="app-week" aria-label="10월 4일부터 10일까지 일정 수">
+                <li class="is-sun"><span>일</span><b>4</b></li><li><span>월</span><b>5</b><i aria-hidden="true"><i></i></i></li><li><span>화</span><b>6</b><i aria-hidden="true"><i></i></i></li><li class="is-today" aria-current="date"><span>수</span><b>7</b><i aria-hidden="true"><i></i><i></i><i></i><i></i></i></li><li><span>목</span><b>8</b><i aria-hidden="true"><i></i><i></i></i></li><li><span>금</span><b>9</b><i aria-hidden="true"><i></i></i></li><li><span>토</span><b>10</b><i aria-hidden="true"><i></i></i></li>
+              </ol>
+              <div class="app-day-head"><h4>10월 7일 수요일</h4><p class="app-next"><span>다음 일정</span><b>디자인 기초</b><small>수업 · 오전 9:00 시작 · 30분 후</small></p></div>
+              <div class="app-today-grid">
+                <section aria-labelledby="flow-heading">
+                  <div class="app-section-head"><h4 id="flow-heading">하루 흐름 <span>3건</span></h4><small>당일 6시간</small></div>
+                  <ol class="app-timeline">
+                    <li class="is-now"><time>08:30</time><span class="visually-hidden">지금</span></li>
+                    <li class="is-free"><time>08:30</time><span>빈 시간 30분 · 08:30–09:00</span></li>
+                    <li class="is-class"><time>09:00</time><span><b>디자인 기초</b><small>수업 · 강의실 302</small></span></li>
+                    <li class="is-free"><time>10:30</time><span>빈 시간 2시간 30분 · 10:30–13:00</span></li>
+                    <li class="is-work"><time>13:00</time><span><b>카페 오후 근무</b><small>근무 · 카페 · 예상 44,000원</small></span></li>
+                    <li class="is-free"><time>17:00</time><span>빈 시간 2시간 · 17:00–19:00</span></li>
+                    <li class="is-personal"><time>19:00</time><span><b>가볍게 산책하기</b><small>개인 · 동네 공원</small></span></li>
+                  </ol>
+                </section>
+                <div class="app-side">
+                  <section aria-labelledby="todo-heading">
+                    <h4 id="todo-heading">해야 할 일</h4><p class="app-help">오늘 마감과 지연된 항목부터 확인하세요.</p>
+                    <p class="app-count"><b>과제·시험</b> 7일 안에 1건</p>
+                    <ol class="app-rows"><li class="is-class"><time>10.8 목</time><span><b>디자인 기초 과제</b><small>과제 · 디자인 기초 · 내일 마감</small></span></li></ol>
+                  </section>
+                  <section aria-labelledby="personal-heading">
+                    <h4 id="personal-heading">개인 할 일</h4><p class="app-help">7일 안에 1건</p>
+                    <ol class="app-rows"><li class="has-check"><span class="app-check" aria-hidden="true"></span><span><b>읽고 싶은 책 고르기</b><small>개인 할 일 · 우선순위 낮음 · 시간 미정</small></span><time>오늘</time></li></ol>
+                  </section>
+                  <p class="app-work-sum"><b>근무</b> <span>유급 4시간</span> <span>급여 <b>44,000원</b></span> <span>근무 1건</span></p>
+                </div>
               </div>
             </div>
             <div id="month-panel" class="preview-panel" role="tabpanel" aria-labelledby="month-tab" tabindex="0" hidden>
-              <div class="example-month-heading"><h4>2026년 10월</h4><span>수업과 근무, 개인 일정까지 한눈에</span></div>
-              <div class="example-calendar" aria-label="2026년 10월 가상 달력">
-                <div class="calendar-weekdays" aria-hidden="true"><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span><span>일</span></div>
-                <div class="calendar-dates">
-                  <div class="outside">28</div><div class="outside">29</div><div class="outside">30</div><div>1<span>통계 입문</span></div><div>2</div><div>3</div><div>4</div>
-                  <div>5<span>디자인 기초</span></div><div>6<span>대학 글쓰기</span></div><div class="selected"><b>7</b><span>디자인 기초</span><span class="work-example">카페 근무</span><span>산책</span></div><div>8<span>통계 입문</span><span>과제 마감</span></div><div>9<span class="work-example">카페 근무</span></div><div>10<span>친구와 점심</span></div><div>11</div>
-                  <div>12<span>디자인 기초</span></div><div>13<span>대학 글쓰기</span></div><div>14<span>디자인 기초</span></div><div>15<span>통계 입문</span></div><div>16<span class="work-example">카페 근무</span></div><div>17</div><div>18</div>
-                  <div>19<span>디자인 기초</span></div><div>20<span>대학 글쓰기</span></div><div>21<span>디자인 기초</span><span>디자인 기초 시험</span></div><div>22<span>통계 입문</span></div><div>23<span class="work-example">카페 근무</span></div><div>24</div><div>25</div>
-                  <div>26<span>디자인 기초</span></div><div>27<span>대학 글쓰기</span></div><div>28<span>디자인 기초</span></div><div>29<span>통계 입문</span></div><div>30<span class="work-example">카페 근무</span></div><div>31</div><div class="outside">1</div>
+              <div class="app-title-row"><h3 class="app-title">2026년 10월</h3><span class="app-seg" aria-hidden="true"><span class="is-on">달력</span><span>목록</span><span>주간</span></span></div>
+              <div class="app-month">
+                <div class="example-calendar" role="group" aria-label="2026년 10월 가상 달력">
+                  <div class="calendar-weekdays" aria-hidden="true"><span class="is-sun">일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span class="is-sat">토</span></div>
+                  <div class="calendar-dates">
+                    <div class="outside is-sun"><b class="date">27</b></div><div class="outside"><b class="date">28</b><span class="chip is-design"><small>09:00</small><span>디자인 기초</span></span></div><div class="outside"><b class="date">29</b><span class="chip is-writing"><small>11:00</small><span>대학 글쓰기</span></span></div><div class="outside"><b class="date">30</b><span class="chip is-design"><small>09:00</small><span>디자인 기초</span></span></div><div><b class="date">1</b><span class="chip is-stats"><small>14:00</small><span>통계 입문</span></span></div><div><b class="date">2</b><span class="chip is-work"><small>13:00</small><span>카페 오후 근무</span></span></div><div class="is-sat is-holiday"><b class="date">3</b><small class="holiday">개천절</small></div>
+                    <div class="is-sun"><b class="date">4</b></div><div class="is-holiday"><b class="date">5</b><small class="holiday">대체공휴일</small><span class="chip is-design"><small>09:00</small><span>디자인 기초</span></span></div><div><b class="date">6</b><span class="chip is-writing"><small>11:00</small><span>대학 글쓰기</span></span></div><div class="selected"><b class="date">7</b><span class="chip is-design"><small>09:00</small><span>디자인 기초</span></span><span class="chip is-work"><small>13:00</small><span>카페 오후 근무</span></span><span class="chip is-personal"><small>19:00</small><span>가볍게 산책하기</span></span></div><div><b class="date">8</b><span class="chip is-task"><small>과제</small><span>디자인 기초 과제</span></span><span class="chip is-stats"><small>14:00</small><span>통계 입문</span></span></div><div class="is-holiday"><b class="date">9</b><small class="holiday">한글날</small><span class="chip is-work"><small>13:00</small><span>카페 오후 근무</span></span></div><div class="is-sat"><b class="date">10</b><span class="chip is-social"><small>12:30</small><span>친구와 점심</span></span></div>
+                    <div class="is-sun"><b class="date">11</b></div><div><b class="date">12</b><span class="chip is-design"><small>09:00</small><span>디자인 기초</span></span></div><div><b class="date">13</b><span class="chip is-writing"><small>11:00</small><span>대학 글쓰기</span></span></div><div><b class="date">14</b><span class="chip is-design"><small>09:00</small><span>디자인 기초</span></span></div><div><b class="date">15</b><span class="chip is-stats"><small>14:00</small><span>통계 입문</span></span></div><div><b class="date">16</b><span class="chip is-work"><small>13:00</small><span>카페 오후 근무</span></span></div><div class="is-sat"><b class="date">17</b></div>
+                    <div class="is-sun"><b class="date">18</b></div><div><b class="date">19</b><span class="chip is-design"><small>09:00</small><span>디자인 기초</span></span></div><div><b class="date">20</b><span class="chip is-writing"><small>11:00</small><span>대학 글쓰기</span></span></div><div><b class="date">21</b><span class="chip is-task"><small>시험</small><span>디자인 기초 시험</span></span><span class="chip is-design"><small>09:00</small><span>디자인 기초</span></span></div><div><b class="date">22</b><span class="chip is-stats"><small>14:00</small><span>통계 입문</span></span></div><div><b class="date">23</b><span class="chip is-work"><small>13:00</small><span>카페 오후 근무</span></span></div><div class="is-sat"><b class="date">24</b></div>
+                    <div class="is-sun"><b class="date">25</b></div><div><b class="date">26</b><span class="chip is-design"><small>09:00</small><span>디자인 기초</span></span></div><div><b class="date">27</b><span class="chip is-writing"><small>11:00</small><span>대학 글쓰기</span></span></div><div><b class="date">28</b><span class="chip is-design"><small>09:00</small><span>디자인 기초</span></span></div><div><b class="date">29</b><span class="chip is-stats"><small>14:00</small><span>통계 입문</span></span></div><div><b class="date">30</b><span class="chip is-work"><small>13:00</small><span>카페 오후 근무</span></span></div><div class="is-sat"><b class="date">31</b></div>
+                  </div>
                 </div>
+                <section class="selected-day" aria-labelledby="selected-day-heading"><h4 id="selected-day-heading">10월 7일 수요일</h4><ol class="app-rows"><li class="is-class"><time>09:00</time><span><b>디자인 기초</b><small>수업, 강의실 302</small></span></li><li class="is-work"><time>13:00</time><span><b>카페 오후 근무</b><small>근무, 카페</small></span></li><li class="is-personal"><time>19:00</time><span><b>가볍게 산책하기</b><small>개인, 동네 공원</small></span></li></ol></section>
               </div>
-              <section class="selected-day" aria-labelledby="selected-day-heading"><h5 id="selected-day-heading">10월 7일 수요일 일정</h5><ol><li><time>09:00</time><span class="small-tag">수업</span><span>디자인 기초</span></li><li><time>13:00</time><span class="small-tag">근무</span><span>카페 오후 근무</span></li><li><time>19:00</time><span class="small-tag">개인</span><span>가볍게 산책하기</span></li></ol></section>
               <p class="calendar-footnote">예시에서는 10월 7일을 선택한 상태입니다. 일정을 입력하거나 저장하는 기능은 제공하지 않습니다.</p>
             </div>
             <div id="timetable-panel" class="preview-panel" role="tabpanel" aria-labelledby="timetable-tab" tabindex="0" hidden>
-              <div class="example-month-heading"><h4>2026년 2학기 시간표</h4><span>‘일정에 적용’하면 학기 동안 달력에 표시</span></div>
-              <table class="example-timetable">
-                <caption class="visually-hidden">가상 주간 시간표: 월·수 09:00 - 10:30 디자인 기초, 화 11:00 - 12:15 대학 글쓰기, 목 14:00 - 15:15 통계 입문</caption>
-                <thead><tr><td></td><th scope="col">월</th><th scope="col">화</th><th scope="col">수</th><th scope="col">목</th><th scope="col">금</th></tr></thead>
-                <tbody>
-                  <tr><th scope="row"><time>09:00</time></th><td class="class-cell" data-start="09:00" data-end="10:30">디자인 기초</td><td></td><td class="class-cell" data-start="09:00" data-end="10:30">디자인 기초</td><td></td><td></td></tr>
-                  <tr><th scope="row"><time>11:00</time></th><td></td><td class="class-cell is-alt" data-start="11:00" data-end="12:15">대학 글쓰기</td><td></td><td></td><td></td></tr>
-                  <tr><th scope="row"><time>14:00</time></th><td></td><td></td><td></td><td class="class-cell is-alt" data-start="14:00" data-end="15:15">통계 입문</td><td></td></tr>
-                </tbody>
-              </table>
-              <section class="selected-day" aria-labelledby="linked-tasks-heading"><h5 id="linked-tasks-heading">디자인 기초에 연결된 과제·시험</h5><ol><li><time>10/8</time><span class="small-tag">과제</span><span>디자인 기초 과제 마감</span></li><li><time>10/21</time><span class="small-tag">시험</span><span>디자인 기초 시험</span></li></ol></section>
+              <h3 class="app-title">학업</h3>
+              <span class="app-seg is-wide" aria-hidden="true"><span class="is-on">시간표</span><span>과제·시험 <i>2</i></span><span>성적</span></span>
+              <div class="app-card">
+                <div class="app-card-head"><h4>2026년 2학기</h4><small>9.1 화 – 12.18 금 · 등록 수업 4개</small></div>
+                <p class="app-help">‘일정에 적용’하면 학기 동안 수업이 달력에 표시됩니다.</p>
+                <table class="example-timetable">
+                  <caption class="visually-hidden">가상 주간 시간표: 월·수 09:00 - 10:30 디자인 기초, 화 11:00 - 12:15 대학 글쓰기, 목 14:00 - 15:15 통계 입문</caption>
+                  <thead><tr><td>시간</td><th scope="col">월</th><th scope="col">화</th><th scope="col">수</th><th scope="col">목</th><th scope="col">금</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row"><time>09:00</time></th><td class="class-cell is-design" data-start="09:00" data-end="10:30"><b>디자인 기초</b><small>09:00–10:30 · 강의실 302</small></td><td></td><td class="class-cell is-design" data-start="09:00" data-end="10:30"><b>디자인 기초</b><small>09:00–10:30 · 강의실 302</small></td><td></td><td></td></tr>
+                    <tr><th scope="row"><time>11:00</time></th><td></td><td class="class-cell is-writing" data-start="11:00" data-end="12:15"><b>대학 글쓰기</b><small>11:00–12:15 · 인문관 105</small></td><td></td><td></td><td></td></tr>
+                    <tr><th scope="row"><time>14:00</time></th><td></td><td></td><td></td><td class="class-cell is-stats" data-start="14:00" data-end="15:15"><b>통계 입문</b><small>14:00–15:15 · 자연관 210</small></td><td></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <section class="selected-day" aria-labelledby="linked-tasks-heading"><h4 id="linked-tasks-heading">디자인 기초에 연결된 과제·시험</h4><ol class="app-rows"><li class="is-class"><time>10.8 목</time><span><b>디자인 기초 과제</b><small>과제</small></span></li><li class="is-class"><time>10.21 수</time><span><b>디자인 기초 시험</b><small>시험</small></span></li></ol></section>
               <p class="calendar-footnote">수업에 연결한 과제와 시험은 마감일에 오늘 화면과 월간 달력에 함께 표시됩니다.</p>
             </div>
             <div id="work-panel" class="preview-panel" role="tabpanel" aria-labelledby="work-tab" tabindex="0" hidden>
-              <div class="example-month-heading"><h4>카페 오후 근무 · 10월 5일 - 11일</h4><span>시급 11,000원 · 휴게 없음 · 추가 수당 없음</span></div>
+              <h3 class="app-title">근무 관리</h3>
+              <div class="app-card-head"><h4>10월 1일 – 10일 근무</h4><small>완료한 근무는 실제 금액, 예정된 근무는 예상 금액으로 확인합니다.</small></div>
+              <div class="work-summary">
+                <p class="work-total"><span>근무 급여 합계</span><strong>132,000원</strong><small>공제 전 · 실제 입금액과 다릅니다.</small></p>
+                <p><span>완료 근무 · 실제 금액</span><strong>44,000원</strong></p>
+                <p><span>예정 근무 · 예상 금액</span><strong>88,000원</strong></p>
+              </div>
+              <p class="work-job"><b>카페 오후 근무</b> <span>시급 11,000원 · 휴게 없음 · 추가 수당 없음</span></p>
+              <div class="work-columns" aria-hidden="true"><span>근무일</span><span>근무처·상태</span><span>근무 시간</span><span>유급 시간</span><span>급여</span></div>
+              <p class="work-week">지난 주 9.27 일 – 10.3 토</p>
               <ol class="work-records">
-                <li data-date="2026-10-07" data-start="13:00" data-end="17:00"><time datetime="2026-10-07">10월 7일 수</time><span>13:00 - 17:00 · 유급 4시간</span><span class="work-state is-done">근무 완료</span><strong>44,000원</strong></li>
-                <li data-date="2026-10-09" data-start="13:00" data-end="17:00"><time datetime="2026-10-09">10월 9일 금</time><span>13:00 - 17:00 · 유급 4시간</span><span class="work-state">근무 예정</span><strong>44,000원</strong></li>
+                <li data-date="2026-10-02" data-start="13:00" data-end="17:00"><time datetime="2026-10-02">10.2 금</time><span class="work-place"><b>카페 오후 근무</b><em class="work-state is-done">근무 완료</em></span><span>13:00–17:00</span><span>유급 4시간</span><strong>44,000원</strong></li>
               </ol>
-              <div class="work-total"><span>공제 전 참고 급여 합계(예정 포함)</span><strong>88,000원</strong></div>
+              <p class="work-week">이번 주 10.4 일 – 10.10 토</p>
+              <ol class="work-records">
+                <li data-date="2026-10-07" data-start="13:00" data-end="17:00"><time datetime="2026-10-07">10.7 수</time><span class="work-place"><b>카페 오후 근무</b><em class="work-state">근무 예정</em></span><span>13:00–17:00</span><span>유급 4시간</span><strong>44,000원</strong></li>
+                <li data-date="2026-10-09" data-start="13:00" data-end="17:00"><time datetime="2026-10-09">10.9 금</time><span class="work-place"><b>카페 오후 근무</b><em class="work-state">근무 예정</em></span><span>13:00–17:00</span><span>유급 4시간</span><strong>44,000원</strong></li>
+              </ol>
               <p class="calendar-footnote">입력한 조건으로 계산한 공제 전 참고 금액이며, 실제 수령액과 다를 수 있습니다.</p>
             </div>
           </div>
         </div>
-        <figcaption>‘오늘’, ‘월간’, ‘시간표’, ‘근무’ 버튼으로 예시 화면만 바꿔 볼 수 있어요. 일정 입력과 저장은 되지 않습니다. 개발 중인 화면을 표현한 콘셉트로, 실제 서비스와 다를 수 있습니다.</figcaption>
+        <figcaption>‘오늘’, ‘월간’, ‘시간표’, ‘근무’ 버튼으로 예시 화면만 바꿔 볼 수 있어요. 일정 입력과 저장은 되지 않습니다. 개발 중인 TYMO 웹 화면을 바탕으로 만든 예시로, 실제 서비스와 다를 수 있습니다.</figcaption>
       </figure>
     </section>
 

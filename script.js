@@ -1,6 +1,5 @@
 // Preview controls change example panels only. No account, API, or data storage.
 const tabs = [...document.querySelectorAll('[role="tab"]')];
-const titles = ["오늘의 작은 계획", "한눈에 보는 이번 달", "이번 학기 수업", "이번 주 근무 기록"];
 function selectTab(tab) {
   for (const item of tabs) {
     const selected = item === tab;
@@ -8,10 +7,9 @@ function selectTab(tab) {
     item.tabIndex = selected ? 0 : -1;
     document.getElementById(item.getAttribute("aria-controls")).hidden = !selected;
   }
-  const index = tabs.indexOf(tab);
-  document.querySelector(".mock-sidebar .mock-active")?.classList.remove("mock-active");
-  document.querySelectorAll(".mock-sidebar > span")[index]?.classList.add("mock-active");
-  document.querySelector(".product-topline h3").textContent = titles[index];
+  // As in the web app, the calendar, study and work screens sit under the rail's 달력 item.
+  const rail = tab.id === "today-tab" ? "today" : "calendar";
+  for (const item of document.querySelectorAll(".app-rail [data-rail]")) item.classList.toggle("is-active", item.dataset.rail === rail);
 }
 for (const [index, tab] of tabs.entries()) {
   tab.disabled = false;
